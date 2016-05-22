@@ -8,9 +8,12 @@
   "preferGlobal": false,
   "description": "generate markdown from atomdoc via donna/tello.",
   "dependencies": {
+    "donna": "^1.0.13",
     "handlebars": "^4.0.5",
     "lodash": "^4.12.0",
+    "mkdirp": "^0.5.1",
     "q": "^1.4.1",
+    "tello": "^1.0.6",
     "yargs": "^4.7.1"
   },
   "bundleDependencies": [],

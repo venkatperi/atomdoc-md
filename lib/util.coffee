@@ -5,11 +5,11 @@ fs = require 'fs'
 STAT_TYPE = [ 'File', 'Directory', 'BlockDevice',
   'CharacterDevice', 'FIFO', 'Socket' ]
 
-dfs =
-  readFile : Q.denodeify fs.readFile
-  stat : Q.denodeify fs.stat
+dfs = {}
+for p in [ 'readFile', 'stat', 'mkdir', 'writeFile' ]
+  module.exports[ p ] = dfs[ p ] = Q.denodeify fs[ p ]
 
-exists = ( path, type ) ->
+module.exports.exists = ( path, type ) ->
   type = _.capitalize type
   throw new Error 'Unknown type' unless type in STAT_TYPE
   dfs.stat path
@@ -20,11 +20,6 @@ exists = ( path, type ) ->
     return if err.code is 'ENOENT'
     throw err
 
-clamp = ( x, min, max ) ->
+module.exports.clamp = ( x, min, max ) ->
   if x < min then min else if x > max then max else x
 
-module.exports =
-  readFile : dfs.readFile
-  stat : dfs.stat
-  exists : exists
-  clamp : clamp

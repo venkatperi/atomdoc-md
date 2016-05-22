@@ -1,18 +1,22 @@
 path = require 'path'
-util = require './util'
+{readFile, writeFile} = require './util'
 Q = require 'q'
 handlebars = require 'handlebars'
 partials = require './partials'
 {args, bt, classBacktick} = require './helpers'
+mkdirp = Q.denodeify require('mkdirp')
 
 module.exports = class MarkdownGenerator
 
-  constructor : ( {@path, @template, @templateDir} ) ->
-    throw new Error 'Missing option: path' unless @path?
+  constructor : ( {@api, @path, @outdir, @name, @template, @templateDir} ) ->
+    if !@path and !@api
+      throw new Error 'Need either api or path to api'
+
     @template ?= 'default'
     @templateDir ?= path.join(__dirname, '../template', @template)
 
-    @initialized = @load @path
+    p = if @path then @load(@path) else Q(true)
+    @initialized = p
     .then @loadTemplates
     .then @_registerPartials
     .then @_createView
@@ -24,7 +28,7 @@ module.exports = class MarkdownGenerator
       handlebars.registerPartial p, @templates[ p ]
 
   load : =>
-    util.readFile @path, 'utf8'
+    readFile @path, 'utf8'
     .then ( contents ) => @api = JSON.parse contents
 
   loadTemplates : =>
@@ -33,7 +37,7 @@ module.exports = class MarkdownGenerator
     Q.all (for item in list
       do ( item ) =>
         file = path.join @templateDir, "#{item}.hbs"
-        util.readFile file, 'utf8'
+        readFile file, 'utf8'
         .then ( src ) => handlebars.compile src
         .then ( tpl ) => @templates[ item ] = tpl )
 
@@ -46,13 +50,21 @@ module.exports = class MarkdownGenerator
           for m in klass[ "#{type}#{cat}" ] ? []
             m.args = args m.arguments
             all.push m
-      m.args = args m.arguments for m in klass.events
+      m.args = (args m.arguments for m in klass.events ? [])
       klass
 
-  generateMarkdown : ( outdir ) =>
-    @initialized.then =>
+  _ensureOutputDir : =>
+    mkdirp @outdir
+
+  generateMarkdown : () =>
+    @initialized.then @_ensureOutputDir
+    .then =>
       markdown = @templates.api @view
       classBacktick markdown
+    .then ( output ) =>
+      file = path.join @outdir, "#{@name}"
+      writeFile file, output 
+
         
         
         
