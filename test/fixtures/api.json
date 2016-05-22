@@ -1,0 +1,186 @@
+{
+  "classes": {
+    "Interval": {
+      "name": "Interval",
+      "filename": "lib/Interval.coffee",
+      "srcUrl": "https://github.com/venkatperi/line-segment-ops/blob/v0.1.0/lib/Interval.coffee#L20",
+      "sections": [],
+      "classMethods": [],
+      "instanceMethods": [
+        {
+          "name": "constructor",
+          "sectionName": null,
+          "srcUrl": "https://github.com/venkatperi/line-segment-ops/blob/v0.1.0/lib/Interval.coffee#L47",
+          "visibility": "Public",
+          "summary": "Create a immutable {Interval} object",
+          "description": "Create a immutable {Interval} object\n\nAccepts the following types of inputs:\n\n* A {String} \"<number> <sep> <number>\" where sep can be any one of\n  a comma, semicolon, or a space\n* A {Array<Number>} of two numbers\n* An {Object} with one of these key combinations:\n  * obj.from, obj.to\n  * obj.start, obj.end\n  * obj.a, obj.b\n* two {Numbers}"
+        },
+        {
+          "name": "contains",
+          "sectionName": null,
+          "srcUrl": "https://github.com/venkatperi/line-segment-ops/blob/v0.1.0/lib/Interval.coffee#L57",
+          "visibility": "Public",
+          "summary": "Checks if this {Interval} contains the other.",
+          "description": "Checks if this {Interval} contains the other.",
+          "arguments": [
+            {
+              "name": "other",
+              "description": "{Interval} the other interval",
+              "type": "Interval",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "name": "overlaps",
+          "sectionName": null,
+          "srcUrl": "https://github.com/venkatperi/line-segment-ops/blob/v0.1.0/lib/Interval.coffee#L67",
+          "visibility": "Public",
+          "summary": "The {Interval}s have some points in common, but not all.",
+          "description": "The {Interval}s have some points in common, but not all.",
+          "arguments": [
+            {
+              "name": "other",
+              "description": "{Interval} the other interval",
+              "type": "Interval",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "name": "within",
+          "sectionName": null,
+          "srcUrl": "https://github.com/venkatperi/line-segment-ops/blob/v0.1.0/lib/Interval.coffee#L79",
+          "visibility": "Public",
+          "summary": "One {Interval} is completely within the other\n  with no touching endpoints.",
+          "description": "One {Interval} is completely within the other\n  with no touching endpoints.",
+          "arguments": [
+            {
+              "name": "other",
+              "description": "{Interval} the other interval",
+              "type": "Interval",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "name": "touches",
+          "sectionName": null,
+          "srcUrl": "https://github.com/venkatperi/line-segment-ops/blob/v0.1.0/lib/Interval.coffee#L92",
+          "visibility": "Public",
+          "summary": "Checks if this {Interval} touches the other.",
+          "description": "Checks if this {Interval} touches the other.\n\nTwo line segments touch, if:\n\n* one their endpoints touch\n* their interiors do not share any common points",
+          "arguments": [
+            {
+              "name": "other",
+              "description": "{Interval} the other interval",
+              "type": "Interval",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "name": "disjoint",
+          "sectionName": null,
+          "srcUrl": "https://github.com/venkatperi/line-segment-ops/blob/v0.1.0/lib/Interval.coffee#L101",
+          "visibility": "Public",
+          "summary": "Intersection with other {Interval} is empty",
+          "description": "Intersection with other {Interval} is empty",
+          "arguments": [
+            {
+              "name": "other",
+              "description": "{Interval} the other interval",
+              "type": "Interval",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "name": "union",
+          "sectionName": null,
+          "srcUrl": "https://github.com/venkatperi/line-segment-ops/blob/v0.1.0/lib/Interval.coffee#L112",
+          "visibility": "Public",
+          "summary": "Calculates the union of the given {Intervals}",
+          "description": "Calculates the union of the given {Intervals}\n\nA union of intervals can result in an array of unconnected parts.",
+          "arguments": [
+            {
+              "name": "others",
+              "description": "{Array<Interval>} One or more intervals Returns {Interval} or an {Array<Interval>}",
+              "type": "Interval",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "name": "intersection",
+          "sectionName": null,
+          "srcUrl": "https://github.com/venkatperi/line-segment-ops/blob/v0.1.0/lib/Interval.coffee#L122",
+          "visibility": "Public",
+          "summary": "Calculates the intersection, i.e. the points where they concur.",
+          "description": "Calculates the intersection, i.e. the points where they concur.",
+          "arguments": [
+            {
+              "name": "other",
+              "description": "{Interval} The other interval Returns an {Interval} with the intersection or undefined if the two do not intersect.",
+              "type": "Interval",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "name": "difference",
+          "sectionName": null,
+          "srcUrl": "https://github.com/venkatperi/line-segment-ops/blob/v0.1.0/lib/Interval.coffee#L130",
+          "visibility": "Public",
+          "summary": "summary",
+          "description": "summary\n\n A\\B={x:x in A and x not in B}."
+        },
+        {
+          "name": "xor",
+          "sectionName": null,
+          "srcUrl": "https://github.com/venkatperi/line-segment-ops/blob/v0.1.0/lib/Interval.coffee#L148",
+          "visibility": "Public",
+          "summary": "Compute an XOR with the given {Interval}",
+          "description": "Compute an XOR with the given {Interval}\n\nThe set of elements belonging to one but not both of two given sets.\nIt is therefore the union of the complement of A with respect to\nB and B with respect to  A, and corresponds to the XOR operation in\nBoolean logic.",
+          "arguments": [
+            {
+              "name": "other",
+              "description": "{Interval} The other",
+              "type": "Interval",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "name": "equals",
+          "sectionName": null,
+          "srcUrl": "https://github.com/venkatperi/line-segment-ops/blob/v0.1.0/lib/Interval.coffee#L164",
+          "visibility": "Public",
+          "summary": "Check if both {Interval}s are equal",
+          "description": "Check if both {Interval}s are equal",
+          "arguments": [
+            {
+              "name": "other",
+              "description": "{Interval} the other interval",
+              "type": "Interval",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "name": "toString",
+          "sectionName": null,
+          "srcUrl": "https://github.com/venkatperi/line-segment-ops/blob/v0.1.0/lib/Interval.coffee#L171",
+          "visibility": "Public",
+          "summary": "Get a {String} representation of this {Interval}",
+          "description": "Get a {String} representation of this {Interval}"
+        }
+      ],
+      "classProperties": [],
+      "instanceProperties": [],
+      "visibility": "Public",
+      "summary": "{Interval} represents a line segment on the\n  the number line.",
+      "description": "{Interval} represents a line segment on the\n  the number line.\n\nAn (interval)[http://mathworld.wolfram.com/Interval.html]\nis a connected portion of the real line.\n\nAlso see (A Small Set of Formal Topological Relationships Suitable\n  for End User Interaction)[http://www.gdmc.nl/oosterom/atti.pdf]\n\nA couple of definitions:\n\n* The boundary of an {Interval} is set of its two endpoints.\n* The interior of an {Interval} is the set of all points\n  in the {Interval} less its boundary (endpoints)."
+    }
+  }
+}
