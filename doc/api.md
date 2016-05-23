@@ -24,7 +24,8 @@ Handlebars template helpers
 #### Methods
 
 
-<code><a href="#class-Template">Template::</a></a>**get(****)**</code> <b><sub><sup><code>PUBLIC  </code></sup></sub></b> [<img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/code.svg" alt="" height= "16px">](https://github.com/venkatperi/atomdoc-md/blob/v0.1.0/lib/Template.coffee#L37)
+<code><a href="#class-Template">Template::</a></a>**get(****)**</code> <img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/.svg" alt="" height= "16px"> 
+ [<img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/code.svg" alt="" height= "16px">](https://github.com/venkatperi/atomdoc-md/blob/v0.1.0/lib/Template.coffee#L37)
  [<img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/arrow-up.svg" alt="" height= "16px">](#class-Template)
 
 * <code>name</code> [{String}](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) The template name 
