@@ -5,7 +5,7 @@
  <code>[MarkdownGenerator](#class-MarkdownGenerator)</code> | Generates markdown from atomdoc/tello's metadata
  <code>[Template](#class-Template)</code> | Handlebars template helpers
 
-### <a name="class-MarkdownGenerator">MarkdownGenerator</a> <b><sub><sup><code>CLASS  </code></sup></sub></b> [<img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/arrow-up.svg" alt="Back to Class List" height= "18px">](#classes)
+### <a name="class-MarkdownGenerator">MarkdownGenerator</a> <b><sub><sup><code>CLASS  </code></sup></sub></b> [<img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/arrow-up.svg" alt="Back to Class List" height= "24px">](#classes)
 
 Generates markdown from atomdoc/tello's metadata
 
@@ -14,7 +14,7 @@ Generates markdown from atomdoc/tello's metadata
 
  
 
-### <a name="class-Template">Template</a> <b><sub><sup><code>CLASS  </code></sup></sub></b> [<img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/arrow-up.svg" alt="Back to Class List" height= "18px">](#classes)
+### <a name="class-Template">Template</a> <b><sub><sup><code>CLASS  </code></sup></sub></b> [<img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/arrow-up.svg" alt="Back to Class List" height= "24px">](#classes)
 
 Handlebars template helpers
 
@@ -24,9 +24,9 @@ Handlebars template helpers
 #### Methods
 
 
-<code><a href="#class-Template">Template::</a></a>**get(****)**</code> <img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/public.svg" alt="" height= "18px"> 
- [<img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/code.svg" alt="" height= "18px">](https://github.com/venkatperi/atomdoc-md/blob/v0.1.0/lib/Template.coffee#L37)
- [<img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/arrow-up.svg" alt="" height= "18px">](#class-Template)
+<code><a href="#class-Template">Template::</a></a>**get(****)**</code> <img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/public.svg" alt="" height= "24px"> 
+ [<img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/code.svg" alt="" height= "24px">](https://github.com/venkatperi/atomdoc-md/blob/v0.1.0/lib/Template.coffee#L37)
+ [<img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/arrow-up.svg" alt="" height= "24px">](#class-Template)
 
 * <code>name</code> [{String}](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) The template name 
 
