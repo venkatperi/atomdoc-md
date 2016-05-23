@@ -24,7 +24,7 @@ Handlebars template helpers
 #### Methods
 
 
-<code><a href="#class-Template">Template::</a></a>**get(****)**</code> <img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/public.svg" alt="" height= "24px"> 
+<code><a href="#class-Template">Template::</a></a>**get(****)**</code> <img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/public1.svg" alt="" height= "24px"> 
  [<img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/code.svg" alt="" height= "24px">](https://github.com/venkatperi/atomdoc-md/blob/v0.1.0/lib/Template.coffee#L37)
  [<img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/arrow-up.svg" alt="" height= "24px">](#class-Template)
 
