@@ -1,0 +1,20 @@
+{{#if allMethods}}
+{{> hr}}
+
+#### Methods
+
+{{#each allMethods}}
+
+{{> name_args klass=../klass}}
+
+{{> arguments}}
+
+{{{description}}}
+
+{{> returns}}
+
+{{#unless @last}}
+{{> hr}}
+{{/unless}}
+{{/each}}
+{{/if}}

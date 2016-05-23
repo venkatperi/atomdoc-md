@@ -1,0 +1,17 @@
+{{#if allProperties}}
+{{> hr}}
+
+#### Properties
+
+{{#each allProperties}}
+{{> association klass=../klass}}**{{name}}</code>** {{> badge content=visibility}}
+
+{{{description}}}
+
+{{#unless @last}}
+{{> hr}}
+
+{{/unless}}
+
+{{/each}}
+{{/if}}

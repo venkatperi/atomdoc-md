@@ -107,7 +107,7 @@
   },
   "no_trailing_whitespace": {
     "level": "error",
-    "allowed_in_comments": false,
+    "allowed_in_comments": true,
     "allowed_in_empty_lines": true
   },
   "no_unnecessary_double_quotes": {

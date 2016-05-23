@@ -1,0 +1,22 @@
+{
+  "templates": {
+    "ext" : "hbs",
+    "main": "api",
+    "partials": [
+      "arguments",
+      "events",
+      "methods",
+      "badge",
+      "class",
+      "returns",
+      "code",
+      "octicon",
+      "hr",
+      "name_args",
+      "name_desc",
+      "properties",
+      "association",
+      "visibility"
+    ]
+  }
+}

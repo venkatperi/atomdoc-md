@@ -1,0 +1,16 @@
+## API
+
+<a name="classes">**Classes**</a>
+{{#each classes}}
+* <code>[{{name}}](#class-{{name}})</code> {{{summary}}}
+{{/each}}
+
+{{#each classes as |klass|}}
+{{> class klass=klass}}
+
+{{#unless @last}}
+{{> hr}}
+{{/unless}}
+{{/each}}
+
+
