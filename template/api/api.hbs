@@ -1,5 +1,6 @@
 ## API
 
+{{! emit a class list }}
 <a name="classes">**Classes**</a>
 {{#each classes}}
 * <code>[{{name}}](#class-{{name}})</code> {{{summary}}}
@@ -8,9 +9,8 @@
 {{#each classes as |klass|}}
 {{> class klass=klass}}
 
-{{#unless @last}}
-{{> hr}}
-{{/unless}}
+{{#unless @last}} {{> hr}} {{/unless}}
+
 {{/each}}
 
 

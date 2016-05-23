@@ -6,7 +6,7 @@ handlebars = require 'handlebars'
 hconf = require('hconf')(module : module)
 
 ###
-Internal: Handlebars template helpers
+Public: Handlebars template helpers
   
 ###
 module.exports = class Template

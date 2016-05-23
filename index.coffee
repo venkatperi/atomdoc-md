@@ -5,14 +5,13 @@ tello = require 'tello'
 MarkdownGenerator = require './lib/MarkdownGenerator'
 prettyTime = require 'pretty-hrtime'
 log = require('./lib/log') 'index'
+{writeFile} = require './lib/util'
+timed = require './lib/timed'
 
-time = ( name, f, args... ) ->
-  start = process.hrtime()
-  Q.fapply f, args...
-  .then ( res ) ->
-    end = process.hrtime start
-    log.v "#{name}:", prettyTime end
-    res
+save = ( file, data ) ->
+  log.v 'saving file:', file
+  writeFile file, JSON.stringify data, null, 2
+  .then -> data
 
 argv = require 'yargs'
 .command 'generate <module>',
@@ -26,25 +25,30 @@ argv = require 'yargs'
     alias : 'o'
     default : 'doc'
 
-  verbose :
-    alias : 'v'
-    describe : 'verbose mode'
+  level :
+    alias : 'l'
+    describe : 'log level'
+    default : 'info'
+    choices : [ 'debug', 'verbose', 'info', 'warn', 'error' ]
 
   template :
     default : 'api'
     describe : 'template name'
+
+  meta :
+    describe : 'write donna (donna.json) and tello (tello.json) metadata to' +
+      ' doc dir'
 
   name :
     describe : 'generated file name'
     alias : 'n'
     default : 'api.md'
 
-.boolean 'verbose'
 .demand 1, 'command missing'
 .strict()
 .argv
 
-log.level if argv.verbose then 'verbose' else 'info'
+log.level argv.level
 modulePath = path.resolve argv.module
 docdir = path.resolve(path.join argv.module, argv.doc)
 
@@ -52,19 +56,38 @@ log.v 'module:', modulePath
 log.v 'docdir:', docdir
 log.v 'output file:', argv.name
 
+logSave = ( name ) -> ( data ) ->
+  log.d data
+  return data unless argv.meta
+  save path.join(docdir, name), data
+
 Q()
 .then ->
-  time 'donna', donna.generateMetadata, [ argv.module ]
+  timed 'donna', donna.generateMetadata, [ argv.module ]
+  .then ( [m,t] ) ->
+    log.v 'donna:', prettyTime t
+    m
+.then logSave 'donna.json'
 .then ( metadata )->
-  time 'tello', tello.digest, metadata
+  timed 'tello', -> tello.digest metadata
+  .then ( [m,t] ) ->
+    log.v 'tello:', prettyTime t
+    m
+.then logSave 'tello.json'
 .then ( apiData ) ->
+  log.d apiData
+
   gen = new MarkdownGenerator(
+    modulePath : modulePath
     api : apiData,
     docdir : docdir,
     template : argv.template
     name : argv.name)
-  time 'generate markdown', gen.generateMarkdown
-.then ( res ) ->
+  timed 'generate markdown', gen.generateMarkdown
+  .then ( [m,t] ) ->
+    log.v 'generate markdown:', prettyTime t
+    m
+.then (  ) ->
   console.log 'Done.'
 .fail ( err ) -> console.log err
   

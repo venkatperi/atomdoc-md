@@ -14,7 +14,10 @@ Public: Generates markdown from atomdoc/tello's metadata
 ###
 module.exports = class MarkdownGenerator
 
-  constructor : ( {@api, @path, @docdir, @name, @template, @templatePath} ) ->
+  constructor : ( {
+  @api, @path, @docdir, @name,
+  @modulePath, @template, @templatePath
+  } ) ->
     if !@path and !@api
       throw new Error 'Need either api or path to api'
 
@@ -26,7 +29,7 @@ module.exports = class MarkdownGenerator
       (if @path then @_load(@path) else Q(true))
       .then => @template.initialized
       .then @_createView
-    @initialized.done() # throw any errors
+    #@initialized.done() # throw any errors
 
   _load : =>
     readFile @path, 'utf8'
