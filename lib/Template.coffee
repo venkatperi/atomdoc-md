@@ -75,6 +75,9 @@ module.exports = class Template
     handlebars.registerHelper 'capitalize', ( options ) ->
       _.capitalize options?.fn(this)
 
+    handlebars.registerHelper 'removeCRLF', ( options ) ->
+      options?.fn(this)?.replace /[\r\n]/g, ' '
+
   _registerPartials : =>
     for p in @config.templates.partials
       handlebars.registerPartial p, @templates[ p ]

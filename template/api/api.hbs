@@ -1,9 +1,10 @@
-## API
+### API
 
 {{! emit a class list }}
-<a name="classes">**Classes**</a>
+ Class |  Summary
+ ------| ------------
 {{#each classes}}
-* <code>[{{name}}](#class-{{name}})</code> {{{summary}}}
+ <code>[{{name}}](#class-{{name}})</code> | {{#removeCRLF}}{{{summary}}}{{/removeCRLF}}
 {{/each}}
 
 {{#each classes as |klass|}}
