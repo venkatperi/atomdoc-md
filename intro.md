@@ -39,3 +39,15 @@ AtomdocMD = require 'atomdoc-md'
 generator = new AtomdocMD( options );
 generator.generateMarkdown()
 ```
+
+## Generate `README.md`
+```
+# From the project's root
+
+atomdoc-md generate -o . -n README.md .
+```
+
+## Importing Files
+The default template `api` will include files `intro.md` and `appendix.md` into the output.
+The files must be located in the `--doc` docs directory.
+
