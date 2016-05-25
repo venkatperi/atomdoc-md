@@ -786,7 +786,7 @@
                   21
                 ],
                 [
-                  87,
+                  88,
                   21
                 ]
               ],
@@ -797,8 +797,8 @@
                   17
                 ],
                 [
-                  96,
-                  28
+                  98,
+                  12
                 ]
               ]
             }
@@ -915,20 +915,20 @@
           "82": {
             "2": {
               "type": "comment",
-              "doc": "\nPublic: Generates markdown\n\nWrites markdown to the specified output file. \n",
+              "doc": "\nPublic: Writes markdown to the output file. \n\nReturns a {Promise} which resolves with the generated\n{String} when done.\n",
               "range": [
                 [
                   82,
                   2
                 ],
                 [
-                  86,
+                  87,
                   4
                 ]
               ]
             }
           },
-          "87": {
+          "88": {
             "21": {
               "name": "generateMarkdown",
               "bindingType": "prototypeProperty",
@@ -936,15 +936,15 @@
               "paramNames": [],
               "range": [
                 [
-                  87,
+                  88,
                   21
                 ],
                 [
-                  96,
-                  28
+                  98,
+                  12
                 ]
               ],
-              "doc": "\nPublic: Generates markdown\n\nWrites markdown to the specified output file. \n"
+              "doc": "\nPublic: Writes markdown to the output file. \n\nReturns a {Promise} which resolves with the generated\n{String} when done.\n"
             }
           }
         },

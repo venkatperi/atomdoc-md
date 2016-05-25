@@ -58,10 +58,16 @@
         {
           "name": "generateMarkdown",
           "sectionName": null,
-          "srcUrl": "https://github.com/venkatperi/atomdoc-md/blob/v0.5.7/lib/MarkdownGenerator.coffee#L88",
+          "srcUrl": "https://github.com/venkatperi/atomdoc-md/blob/v0.5.7/lib/MarkdownGenerator.coffee#L89",
           "visibility": "Public",
-          "summary": "Generates markdown",
-          "description": "Generates markdown\n\nWrites markdown to the specified output file. "
+          "summary": "Writes markdown to the output file. ",
+          "description": "Writes markdown to the output file. ",
+          "returnValues": [
+            {
+              "type": "Promise",
+              "description": "Returns a {Promise} which resolves with the generated\n{String} when done."
+            }
+          ]
         }
       ],
       "classProperties": [],

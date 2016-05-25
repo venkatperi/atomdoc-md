@@ -81,10 +81,14 @@ Class |  Summary
   <tr>
     <td colspan="4">
       
-      <p>Generates markdown</p>
-  <p>Writes markdown to the specified output file. </p>
+      <p>Writes markdown to the output file. </p>
   
-      
+      <p>  <em>Returns</em></p>
+  <ul>
+  <li>Returns a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> which resolves with the generated
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> when done.</li>
+  </ul>
+  
     </td>
   </tr>
   

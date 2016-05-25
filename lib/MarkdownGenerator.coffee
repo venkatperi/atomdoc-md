@@ -81,9 +81,10 @@ module.exports = class MarkdownGenerator
   _ensureOutputDir : => mkdirp @docdir
 
   ###
-  Public: Generates markdown
+  Public: Writes markdown to the output file. 
   
-  Writes markdown to the specified output file. 
+  Returns a {Promise} which resolves with the generated
+  {String} when done.
   ###
   generateMarkdown : () =>
     @initialized.then @_ensureOutputDir
@@ -95,5 +96,6 @@ module.exports = class MarkdownGenerator
     .then ( output ) =>
       file = path.join @docdir, "#{@name}"
       writeFile file, output
+      output
 
         
