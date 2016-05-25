@@ -1,8 +1,6 @@
-*.coffee
-lib/
+dist/
 test/
 .coveralls.yml
 assets/
-coffeelint.json
 coverage/
 doc/
