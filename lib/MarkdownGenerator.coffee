@@ -80,6 +80,11 @@ module.exports = class MarkdownGenerator
 
   _ensureOutputDir : => mkdirp @docdir
 
+  ###
+  Public: Generates markdown
+  
+  Writes markdown to the specified output file. 
+  ###
   generateMarkdown : () =>
     @initialized.then @_ensureOutputDir
     .then =>

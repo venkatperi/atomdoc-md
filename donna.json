@@ -786,7 +786,7 @@
                   21
                 ],
                 [
-                  82,
+                  87,
                   21
                 ]
               ],
@@ -797,7 +797,7 @@
                   17
                 ],
                 [
-                  91,
+                  96,
                   28
                 ]
               ]
@@ -913,6 +913,22 @@
             }
           },
           "82": {
+            "2": {
+              "type": "comment",
+              "doc": "\nPublic: Generates markdown\n\nWrites markdown to the specified output file. \n",
+              "range": [
+                [
+                  82,
+                  2
+                ],
+                [
+                  86,
+                  4
+                ]
+              ]
+            }
+          },
+          "87": {
             "21": {
               "name": "generateMarkdown",
               "bindingType": "prototypeProperty",
@@ -920,14 +936,15 @@
               "paramNames": [],
               "range": [
                 [
-                  82,
+                  87,
                   21
                 ],
                 [
-                  91,
+                  96,
                   28
                 ]
-              ]
+              ],
+              "doc": "\nPublic: Generates markdown\n\nWrites markdown to the specified output file. \n"
             }
           }
         },

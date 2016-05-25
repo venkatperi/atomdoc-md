@@ -48,7 +48,7 @@ Class |  Summary
   </tr>
   
   <tr>
-    <td><code>:: <b>constructor(</b>  <b>)</b></code></td>
+    <td><code>:: <b>constructor(</b> options <b>)</b></code></td>
     <td width="8%" align="center"><sub>public</sub></td>
     <td width="8%" align="center"><sub>instance</sub></td>
     <td width="8%" align="center"><sub><a href="#class-MarkdownGenerator">MarkdownGenerator</a></sub></td>
@@ -67,6 +67,22 @@ Class |  Summary
   </ul>
   
       <p>Create a new markdown generator</p>
+  
+      
+    </td>
+  </tr>
+  
+  <tr>
+    <td><code>:: <b>generateMarkdown(</b>  <b>)</b></code></td>
+    <td width="8%" align="center"><sub>public</sub></td>
+    <td width="8%" align="center"><sub>instance</sub></td>
+    <td width="8%" align="center"><sub><a href="#class-MarkdownGenerator">MarkdownGenerator</a></sub></td>
+  </tr>
+  <tr>
+    <td colspan="4">
+      
+      <p>Generates markdown</p>
+  <p>Writes markdown to the specified output file. </p>
   
       
     </td>
