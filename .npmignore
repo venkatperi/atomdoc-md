@@ -1,5 +1,8 @@
-Gruntfile.coffee
+*.coffee
 lib/
-index.coffee
 test/
 .coveralls.yml
+assets/
+coffeelint.json
+coverage/
+doc/
