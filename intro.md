@@ -14,6 +14,8 @@ npm install -g atomdoc-md
 atomdoc-md generate <path to module>
 ```
 
+See samples [here](https://github.com/venkatperi/atomdoc-md).
+
 #Usage
 
 ```
