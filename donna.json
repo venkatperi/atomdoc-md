@@ -1,0 +1,1827 @@
+[
+  {
+    "repository": "https://github.com/venkatperi/atomdoc-md.git",
+    "version": "0.5.7",
+    "files": {
+      "coffee-coverage-loader.coffee": {
+        "objects": {
+          "0": {
+            "17": {
+              "name": "coffeeCoverage",
+              "type": "import",
+              "range": [
+                [
+                  0,
+                  17
+                ],
+                [
+                  0,
+                  42
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "coffee-coverage"
+            }
+          },
+          "1": {
+            "14": {
+              "name": "__dirname",
+              "type": "primitive",
+              "range": [
+                [
+                  1,
+                  14
+                ],
+                [
+                  1,
+                  22
+                ]
+              ]
+            }
+          },
+          "9": {
+            "17": {
+              "name": "'istanbul'",
+              "type": "primitive",
+              "range": [
+                [
+                  9,
+                  17
+                ],
+                [
+                  9,
+                  26
+                ]
+              ]
+            }
+          },
+          "10": {
+            "13": {
+              "name": "projectRoot",
+              "type": "primitive",
+              "range": [
+                [
+                  10,
+                  13
+                ],
+                [
+                  10,
+                  23
+                ]
+              ]
+            }
+          },
+          "11": {
+            "12": {
+              "type": "primitive",
+              "range": [
+                [
+                  11,
+                  12
+                ],
+                [
+                  18,
+                  2
+                ]
+              ]
+            }
+          },
+          "19": {
+            "16": {
+              "name": "coverageVar",
+              "type": "primitive",
+              "range": [
+                [
+                  19,
+                  16
+                ],
+                [
+                  19,
+                  26
+                ]
+              ]
+            }
+          },
+          "20": {
+            "16": {
+              "name": "writeOnExit",
+              "type": "primitive",
+              "range": [
+                [
+                  20,
+                  16
+                ],
+                [
+                  20,
+                  26
+                ]
+              ]
+            }
+          },
+          "21": {
+            "12": {
+              "type": "primitive",
+              "range": [
+                [
+                  21,
+                  12
+                ],
+                [
+                  21,
+                  15
+                ]
+              ]
+            }
+          }
+        },
+        "exports": {}
+      },
+      "index.coffee": {
+        "objects": {
+          "0": {
+            "4": {
+              "name": "Q",
+              "type": "import",
+              "range": [
+                [
+                  0,
+                  4
+                ],
+                [
+                  0,
+                  14
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "q@^1.4.1"
+            }
+          },
+          "1": {
+            "8": {
+              "name": "donna",
+              "type": "import",
+              "range": [
+                [
+                  1,
+                  8
+                ],
+                [
+                  1,
+                  25
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "donna-vp@^1.0.13"
+            }
+          },
+          "2": {
+            "7": {
+              "name": "path",
+              "type": "import",
+              "range": [
+                [
+                  2,
+                  7
+                ],
+                [
+                  2,
+                  20
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "path",
+              "builtin": true
+            }
+          },
+          "3": {
+            "8": {
+              "name": "tello",
+              "type": "import",
+              "range": [
+                [
+                  3,
+                  8
+                ],
+                [
+                  3,
+                  22
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "tello@^1.0.6"
+            }
+          },
+          "4": {
+            "20": {
+              "name": "MarkdownGenerator",
+              "type": "import",
+              "range": [
+                [
+                  4,
+                  20
+                ],
+                [
+                  4,
+                  52
+                ]
+              ],
+              "bindingType": "variable",
+              "path": "./lib/MarkdownGenerator"
+            }
+          },
+          "5": {
+            "13": {
+              "name": "prettyTime",
+              "type": "import",
+              "range": [
+                [
+                  5,
+                  13
+                ],
+                [
+                  5,
+                  35
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "pretty-hrtime@^1.0.2"
+            }
+          },
+          "6": {
+            "6": {
+              "name": "log",
+              "type": "function",
+              "range": [
+                [
+                  6,
+                  6
+                ],
+                [
+                  6,
+                  30
+                ]
+              ]
+            }
+          },
+          "7": {
+            "1": {
+              "type": "import",
+              "range": [
+                [
+                  7,
+                  1
+                ],
+                [
+                  7,
+                  9
+                ]
+              ],
+              "bindingType": "variable",
+              "path": "./lib/util",
+              "name": "writeFile",
+              "exportsProperty": "writeFile"
+            }
+          },
+          "8": {
+            "8": {
+              "name": "timed",
+              "type": "import",
+              "range": [
+                [
+                  8,
+                  8
+                ],
+                [
+                  8,
+                  28
+                ]
+              ],
+              "bindingType": "variable",
+              "path": "./lib/timed"
+            }
+          },
+          "10": {
+            "7": {
+              "name": "save",
+              "bindingType": "variable",
+              "type": "function",
+              "paramNames": [
+                "file",
+                "data"
+              ],
+              "range": [
+                [
+                  10,
+                  7
+                ],
+                [
+                  14,
+                  0
+                ]
+              ]
+            }
+          },
+          "15": {
+            "7": {
+              "type": "primitive",
+              "range": [
+                [
+                  15,
+                  7
+                ],
+                [
+                  49,
+                  4
+                ]
+              ]
+            }
+          },
+          "23": {
+            "4": {
+              "type": "primitive",
+              "range": [
+                [
+                  23,
+                  4
+                ],
+                [
+                  25,
+                  18
+                ]
+              ]
+            }
+          },
+          "28": {
+            "4": {
+              "type": "primitive",
+              "range": [
+                [
+                  28,
+                  4
+                ],
+                [
+                  31,
+                  60
+                ]
+              ]
+            }
+          },
+          "31": {
+            "14": {
+              "type": "primitive",
+              "range": [
+                [
+                  31,
+                  14
+                ],
+                [
+                  31,
+                  60
+                ]
+              ]
+            }
+          },
+          "34": {
+            "4": {
+              "type": "primitive",
+              "range": [
+                [
+                  34,
+                  4
+                ],
+                [
+                  35,
+                  29
+                ]
+              ]
+            }
+          },
+          "38": {
+            "4": {
+              "type": "primitive",
+              "range": [
+                [
+                  38,
+                  4
+                ],
+                [
+                  39,
+                  15
+                ]
+              ]
+            }
+          },
+          "42": {
+            "4": {
+              "type": "primitive",
+              "range": [
+                [
+                  42,
+                  4
+                ],
+                [
+                  44,
+                  21
+                ]
+              ]
+            },
+            "15": {
+              "name": "'generated file name'",
+              "type": "primitive",
+              "range": [
+                [
+                  42,
+                  15
+                ],
+                [
+                  42,
+                  35
+                ]
+              ]
+            }
+          },
+          "43": {
+            "12": {
+              "name": "'n'",
+              "type": "primitive",
+              "range": [
+                [
+                  43,
+                  12
+                ],
+                [
+                  43,
+                  14
+                ]
+              ]
+            }
+          },
+          "44": {
+            "14": {
+              "name": "'api.md'",
+              "type": "primitive",
+              "range": [
+                [
+                  44,
+                  14
+                ],
+                [
+                  44,
+                  21
+                ]
+              ]
+            }
+          },
+          "52": {
+            "13": {
+              "name": "modulePath",
+              "type": "function",
+              "range": [
+                [
+                  52,
+                  13
+                ],
+                [
+                  52,
+                  36
+                ]
+              ]
+            }
+          },
+          "53": {
+            "9": {
+              "name": "docdir",
+              "type": "function",
+              "range": [
+                [
+                  53,
+                  9
+                ],
+                [
+                  53,
+                  53
+                ]
+              ]
+            }
+          },
+          "59": {
+            "6": {
+              "name": "run",
+              "bindingType": "variable",
+              "type": "function",
+              "paramNames": [
+                "name",
+                "args"
+              ],
+              "range": [
+                [
+                  59,
+                  6
+                ],
+                [
+                  66,
+                  0
+                ]
+              ]
+            }
+          }
+        },
+        "exports": {}
+      },
+      "lib/MarkdownGenerator.coffee": {
+        "objects": {
+          "0": {
+            "4": {
+              "name": "_",
+              "type": "import",
+              "range": [
+                [
+                  0,
+                  4
+                ],
+                [
+                  0,
+                  19
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "lodash@^4.12.0"
+            }
+          },
+          "1": {
+            "7": {
+              "name": "path",
+              "type": "import",
+              "range": [
+                [
+                  1,
+                  7
+                ],
+                [
+                  1,
+                  20
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "path",
+              "builtin": true
+            }
+          },
+          "2": {
+            "1": {
+              "type": "import",
+              "range": [
+                [
+                  2,
+                  1
+                ],
+                [
+                  2,
+                  8
+                ]
+              ],
+              "bindingType": "variable",
+              "path": "./util",
+              "name": "readFile",
+              "exportsProperty": "readFile"
+            },
+            "11": {
+              "type": "import",
+              "range": [
+                [
+                  2,
+                  11
+                ],
+                [
+                  2,
+                  19
+                ]
+              ],
+              "bindingType": "variable",
+              "path": "./util",
+              "name": "writeFile",
+              "exportsProperty": "writeFile"
+            }
+          },
+          "3": {
+            "4": {
+              "name": "Q",
+              "type": "import",
+              "range": [
+                [
+                  3,
+                  4
+                ],
+                [
+                  3,
+                  14
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "q@^1.4.1"
+            }
+          },
+          "4": {
+            "13": {
+              "name": "handlebars",
+              "type": "import",
+              "range": [
+                [
+                  4,
+                  13
+                ],
+                [
+                  4,
+                  32
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "handlebars@^4.0.5"
+            }
+          },
+          "5": {
+            "1": {
+              "type": "import",
+              "range": [
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  4
+                ]
+              ],
+              "bindingType": "variable",
+              "path": "./helpers",
+              "name": "args",
+              "exportsProperty": "args"
+            },
+            "7": {
+              "type": "import",
+              "range": [
+                [
+                  5,
+                  7
+                ],
+                [
+                  5,
+                  8
+                ]
+              ],
+              "bindingType": "variable",
+              "path": "./helpers",
+              "name": "bt",
+              "exportsProperty": "bt"
+            },
+            "11": {
+              "type": "import",
+              "range": [
+                [
+                  5,
+                  11
+                ],
+                [
+                  5,
+                  19
+                ]
+              ],
+              "bindingType": "variable",
+              "path": "./helpers",
+              "name": "classHref",
+              "exportsProperty": "classHref"
+            }
+          },
+          "6": {
+            "9": {
+              "name": "mkdirp",
+              "type": "function",
+              "range": [
+                [
+                  6,
+                  9
+                ],
+                [
+                  6,
+                  37
+                ]
+              ]
+            }
+          },
+          "7": {
+            "11": {
+              "name": "Template",
+              "type": "import",
+              "range": [
+                [
+                  7,
+                  11
+                ],
+                [
+                  7,
+                  30
+                ]
+              ],
+              "bindingType": "variable",
+              "path": "./Template"
+            }
+          },
+          "8": {
+            "6": {
+              "name": "log",
+              "type": "function",
+              "range": [
+                [
+                  8,
+                  6
+                ],
+                [
+                  8,
+                  33
+                ]
+              ]
+            }
+          },
+          "9": {
+            "8": {
+              "name": "hconf",
+              "type": "function",
+              "range": [
+                [
+                  9,
+                  8
+                ],
+                [
+                  9,
+                  40
+                ]
+              ]
+            }
+          },
+          "15": {
+            "17": {
+              "type": "class",
+              "name": "MarkdownGenerator",
+              "bindingType": "exports",
+              "classProperties": [],
+              "prototypeProperties": [
+                [
+                  28,
+                  16
+                ],
+                [
+                  47,
+                  10
+                ],
+                [
+                  51,
+                  18
+                ],
+                [
+                  63,
+                  16
+                ],
+                [
+                  80,
+                  21
+                ],
+                [
+                  82,
+                  21
+                ]
+              ],
+              "doc": "\nPublic: Generates markdown from atomdoc/tello's metadata\n\n",
+              "range": [
+                [
+                  15,
+                  17
+                ],
+                [
+                  91,
+                  28
+                ]
+              ]
+            }
+          },
+          "17": {
+            "2": {
+              "type": "comment",
+              "doc": "\nPublic: Create a new markdown generator\n\n* `options` {Object}\n  * `options.api` is an {Object} with `tello` api metadata.\n  * `options.path` {String} path to file with `tello` api info\n  * `options.docdir` {String} dir to write the output to. Also looks\n  for files to import (e.g. `intro.md`).\n  * `options.template` {String} name of the template to use\n  * `options.templatePath` {String} alternatively, path to template dir\n",
+              "range": [
+                [
+                  17,
+                  2
+                ],
+                [
+                  27,
+                  4
+                ]
+              ]
+            }
+          },
+          "28": {
+            "16": {
+              "name": "constructor",
+              "bindingType": "prototypeProperty",
+              "type": "function",
+              "paramNames": [
+                null
+              ],
+              "range": [
+                [
+                  28,
+                  16
+                ],
+                [
+                  47,
+                  1
+                ]
+              ],
+              "doc": "\nPublic: Create a new markdown generator\n\n* `options` {Object}\n  * `options.api` is an {Object} with `tello` api metadata.\n  * `options.path` {String} path to file with `tello` api info\n  * `options.docdir` {String} dir to write the output to. Also looks\n  for files to import (e.g. `intro.md`).\n  * `options.template` {String} name of the template to use\n  * `options.templatePath` {String} alternatively, path to template dir\n"
+            }
+          },
+          "47": {
+            "10": {
+              "name": "_load",
+              "bindingType": "prototypeProperty",
+              "type": "function",
+              "paramNames": [],
+              "range": [
+                [
+                  47,
+                  10
+                ],
+                [
+                  51,
+                  1
+                ]
+              ]
+            }
+          },
+          "51": {
+            "18": {
+              "name": "_loadSections",
+              "bindingType": "prototypeProperty",
+              "type": "function",
+              "paramNames": [],
+              "range": [
+                [
+                  51,
+                  18
+                ],
+                [
+                  63,
+                  1
+                ]
+              ]
+            }
+          },
+          "63": {
+            "16": {
+              "name": "_createView",
+              "bindingType": "prototypeProperty",
+              "type": "function",
+              "paramNames": [],
+              "range": [
+                [
+                  63,
+                  16
+                ],
+                [
+                  80,
+                  1
+                ]
+              ]
+            }
+          },
+          "80": {
+            "21": {
+              "name": "_ensureOutputDir",
+              "bindingType": "prototypeProperty",
+              "type": "function",
+              "paramNames": [],
+              "range": [
+                [
+                  80,
+                  21
+                ],
+                [
+                  80,
+                  37
+                ]
+              ]
+            }
+          },
+          "82": {
+            "21": {
+              "name": "generateMarkdown",
+              "bindingType": "prototypeProperty",
+              "type": "function",
+              "paramNames": [],
+              "range": [
+                [
+                  82,
+                  21
+                ],
+                [
+                  91,
+                  28
+                ]
+              ]
+            }
+          }
+        },
+        "exports": 15
+      },
+      "lib/Template.coffee": {
+        "objects": {
+          "0": {
+            "4": {
+              "name": "_",
+              "type": "import",
+              "range": [
+                [
+                  0,
+                  4
+                ],
+                [
+                  0,
+                  19
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "lodash@^4.12.0"
+            }
+          },
+          "1": {
+            "7": {
+              "name": "path",
+              "type": "import",
+              "range": [
+                [
+                  1,
+                  7
+                ],
+                [
+                  1,
+                  20
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "path",
+              "builtin": true
+            }
+          },
+          "2": {
+            "4": {
+              "name": "Q",
+              "type": "import",
+              "range": [
+                [
+                  2,
+                  4
+                ],
+                [
+                  2,
+                  14
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "q@^1.4.1"
+            }
+          },
+          "3": {
+            "5": {
+              "name": "fs",
+              "type": "import",
+              "range": [
+                [
+                  3,
+                  5
+                ],
+                [
+                  3,
+                  16
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "fs",
+              "builtin": true
+            }
+          },
+          "4": {
+            "1": {
+              "type": "import",
+              "range": [
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  8
+                ]
+              ],
+              "bindingType": "variable",
+              "path": "./util",
+              "name": "readFile",
+              "exportsProperty": "readFile"
+            }
+          },
+          "5": {
+            "13": {
+              "name": "handlebars",
+              "type": "import",
+              "range": [
+                [
+                  5,
+                  13
+                ],
+                [
+                  5,
+                  32
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "handlebars@^4.0.5"
+            }
+          },
+          "6": {
+            "8": {
+              "name": "hconf",
+              "type": "function",
+              "range": [
+                [
+                  6,
+                  8
+                ],
+                [
+                  6,
+                  40
+                ]
+              ]
+            }
+          },
+          "7": {
+            "9": {
+              "name": "marked",
+              "type": "import",
+              "range": [
+                [
+                  7,
+                  9
+                ],
+                [
+                  7,
+                  24
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "marked@^0.3.5"
+            }
+          },
+          "8": {
+            "6": {
+              "name": "log",
+              "type": "function",
+              "range": [
+                [
+                  8,
+                  6
+                ],
+                [
+                  8,
+                  33
+                ]
+              ]
+            }
+          },
+          "11": {
+            "13": {
+              "type": "primitive",
+              "range": [
+                [
+                  11,
+                  13
+                ],
+                [
+                  11,
+                  17
+                ]
+              ]
+            }
+          },
+          "19": {
+            "17": {
+              "type": "class",
+              "name": "Template",
+              "bindingType": "exports",
+              "classProperties": [],
+              "prototypeProperties": [
+                [
+                  28,
+                  16
+                ],
+                [
+                  44,
+                  8
+                ],
+                [
+                  53,
+                  11
+                ],
+                [
+                  62,
+                  10
+                ],
+                [
+                  68,
+                  16
+                ],
+                [
+                  75,
+                  21
+                ],
+                [
+                  112,
+                  22
+                ],
+                [
+                  116,
+                  19
+                ]
+              ],
+              "doc": "\nPrivate: Handlebars template helpers\n  \n",
+              "range": [
+                [
+                  19,
+                  17
+                ],
+                [
+                  127,
+                  51
+                ]
+              ]
+            }
+          },
+          "21": {
+            "2": {
+              "type": "comment",
+              "doc": "\nInternal: Create a {Template} helper object\n\n* `@name` (optional) {String} is a builtin template name\n* `@path` (optional) load a template from {String} path\n\n",
+              "range": [
+                [
+                  21,
+                  2
+                ],
+                [
+                  27,
+                  4
+                ]
+              ]
+            }
+          },
+          "28": {
+            "16": {
+              "name": "constructor",
+              "bindingType": "prototypeProperty",
+              "type": "function",
+              "paramNames": [
+                null
+              ],
+              "range": [
+                [
+                  28,
+                  16
+                ],
+                [
+                  38,
+                  1
+                ]
+              ],
+              "doc": "\nInternal: Create a {Template} helper object\n\n* `@name` (optional) {String} is a builtin template name\n* `@path` (optional) load a template from {String} path\n\n"
+            }
+          },
+          "38": {
+            "2": {
+              "type": "comment",
+              "doc": "\nPublic: Returns a loaded handlebars\n\n* `name` {String} The template name\n\n",
+              "range": [
+                [
+                  38,
+                  2
+                ],
+                [
+                  43,
+                  4
+                ]
+              ]
+            }
+          },
+          "44": {
+            "8": {
+              "name": "get",
+              "bindingType": "prototypeProperty",
+              "type": "function",
+              "paramNames": [
+                "name"
+              ],
+              "range": [
+                [
+                  44,
+                  8
+                ],
+                [
+                  44,
+                  37
+                ]
+              ],
+              "doc": "\nPublic: Returns a loaded handlebars\n\n* `name` {String} The template name\n\n"
+            }
+          },
+          "46": {
+            "2": {
+              "type": "comment",
+              "doc": "\nInternal: Render a view with the main template\n\n* `view` {Object} The view to use with the handlebars template\n\nReturns {String} the rendered view\n",
+              "range": [
+                [
+                  46,
+                  2
+                ],
+                [
+                  52,
+                  4
+                ]
+              ]
+            }
+          },
+          "53": {
+            "11": {
+              "name": "render",
+              "bindingType": "prototypeProperty",
+              "type": "function",
+              "paramNames": [
+                "view"
+              ],
+              "range": [
+                [
+                  53,
+                  11
+                ],
+                [
+                  56,
+                  1
+                ]
+              ],
+              "doc": "\nInternal: Render a view with the main template\n\n* `view` {Object} The view to use with the handlebars template\n\nReturns {String} the rendered view\n"
+            }
+          },
+          "56": {
+            "2": {
+              "type": "comment",
+              "doc": "\nInternal: Load a template\n\nReads template config.json, loads the main template and partials and\n registers partials.\n",
+              "range": [
+                [
+                  56,
+                  2
+                ],
+                [
+                  61,
+                  4
+                ]
+              ]
+            }
+          },
+          "62": {
+            "10": {
+              "name": "_load",
+              "bindingType": "prototypeProperty",
+              "type": "function",
+              "paramNames": [],
+              "range": [
+                [
+                  62,
+                  10
+                ],
+                [
+                  68,
+                  1
+                ]
+              ],
+              "doc": "\nInternal: Load a template\n\nReads template config.json, loads the main template and partials and\n registers partials.\n"
+            }
+          },
+          "68": {
+            "16": {
+              "name": "_loadConfig",
+              "bindingType": "prototypeProperty",
+              "type": "function",
+              "paramNames": [],
+              "range": [
+                [
+                  68,
+                  16
+                ],
+                [
+                  75,
+                  1
+                ]
+              ]
+            }
+          },
+          "75": {
+            "21": {
+              "name": "_registerHelpers",
+              "bindingType": "prototypeProperty",
+              "type": "function",
+              "paramNames": [],
+              "range": [
+                [
+                  75,
+                  21
+                ],
+                [
+                  112,
+                  1
+                ]
+              ]
+            }
+          },
+          "112": {
+            "22": {
+              "name": "_registerPartials",
+              "bindingType": "prototypeProperty",
+              "type": "function",
+              "paramNames": [],
+              "range": [
+                [
+                  112,
+                  22
+                ],
+                [
+                  116,
+                  1
+                ]
+              ]
+            }
+          },
+          "116": {
+            "19": {
+              "name": "_loadTemplates",
+              "bindingType": "prototypeProperty",
+              "type": "function",
+              "paramNames": [],
+              "range": [
+                [
+                  116,
+                  19
+                ],
+                [
+                  127,
+                  51
+                ]
+              ]
+            }
+          }
+        },
+        "exports": 19
+      },
+      "lib/builtin.coffee": {
+        "objects": {
+          "0": {
+            "16": {
+              "name": "globalObjects",
+              "type": "import",
+              "range": [
+                [
+                  0,
+                  16
+                ],
+                [
+                  0,
+                  45
+                ]
+              ],
+              "bindingType": "variable",
+              "path": "./globalObjects.json"
+            }
+          },
+          "4": {
+            "7": {
+              "type": "primitive",
+              "range": [
+                [
+                  4,
+                  7
+                ],
+                [
+                  4,
+                  8
+                ]
+              ]
+            }
+          },
+          "6": {
+            "15": {
+              "type": "primitive",
+              "range": [
+                [
+                  6,
+                  15
+                ],
+                [
+                  6,
+                  43
+                ]
+              ]
+            },
+            "26": {
+              "type": "primitive",
+              "range": [
+                [
+                  6,
+                  26
+                ],
+                [
+                  6,
+                  41
+                ]
+              ]
+            }
+          },
+          "8": {
+            "29": {
+              "name": "list",
+              "type": "primitive",
+              "range": [
+                [
+                  8,
+                  29
+                ],
+                [
+                  8,
+                  32
+                ]
+              ]
+            }
+          }
+        },
+        "exports": 8
+      },
+      "lib/helpers.coffee": {
+        "objects": {
+          "0": {
+            "13": {
+              "name": "builtinObj",
+              "type": "import",
+              "range": [
+                [
+                  0,
+                  13
+                ],
+                [
+                  0,
+                  31
+                ]
+              ],
+              "bindingType": "variable",
+              "path": "./builtin"
+            }
+          },
+          "11": {
+            "7": {
+              "name": "bt",
+              "bindingType": "variable",
+              "type": "function",
+              "paramNames": [
+                "str"
+              ],
+              "range": [
+                [
+                  11,
+                  7
+                ],
+                [
+                  11,
+                  27
+                ]
+              ],
+              "doc": null
+            }
+          },
+          "12": {
+            "9": {
+              "name": "code",
+              "bindingType": "variable",
+              "type": "function",
+              "paramNames": [
+                "str"
+              ],
+              "range": [
+                [
+                  12,
+                  9
+                ],
+                [
+                  12,
+                  40
+                ]
+              ],
+              "doc": null
+            }
+          },
+          "13": {
+            "9": {
+              "name": "link",
+              "bindingType": "variable",
+              "type": "function",
+              "paramNames": [
+                "name",
+                "url"
+              ],
+              "range": [
+                [
+                  13,
+                  9
+                ],
+                [
+                  13,
+                  57
+                ]
+              ],
+              "doc": null
+            }
+          },
+          "15": {
+            "10": {
+              "name": "small",
+              "bindingType": "variable",
+              "type": "function",
+              "paramNames": [
+                "str"
+              ],
+              "range": [
+                [
+                  15,
+                  10
+                ],
+                [
+                  15,
+                  50
+                ]
+              ],
+              "doc": null
+            }
+          },
+          "45": {
+            "9": {
+              "name": "args",
+              "type": "primitive",
+              "range": [
+                [
+                  45,
+                  9
+                ],
+                [
+                  45,
+                  12
+                ]
+              ]
+            }
+          },
+          "46": {
+            "7": {
+              "name": "md",
+              "type": "primitive",
+              "range": [
+                [
+                  46,
+                  7
+                ],
+                [
+                  46,
+                  8
+                ]
+              ]
+            }
+          },
+          "47": {
+            "18": {
+              "name": "classBacktick",
+              "type": "primitive",
+              "range": [
+                [
+                  47,
+                  18
+                ],
+                [
+                  47,
+                  30
+                ]
+              ]
+            }
+          },
+          "48": {
+            "14": {
+              "name": "classHref",
+              "type": "primitive",
+              "range": [
+                [
+                  48,
+                  14
+                ],
+                [
+                  48,
+                  22
+                ]
+              ]
+            }
+          },
+          "49": {
+            "19": {
+              "name": "renderHeadings",
+              "type": "primitive",
+              "range": [
+                [
+                  49,
+                  19
+                ],
+                [
+                  49,
+                  32
+                ]
+              ]
+            }
+          }
+        },
+        "exports": 45
+      },
+      "lib/timed.coffee": {
+        "objects": {
+          "0": {
+            "4": {
+              "name": "Q",
+              "type": "import",
+              "range": [
+                [
+                  0,
+                  4
+                ],
+                [
+                  0,
+                  14
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "q@^1.4.1"
+            }
+          }
+        },
+        "exports": 9
+      },
+      "lib/util.coffee": {
+        "objects": {
+          "0": {
+            "4": {
+              "name": "_",
+              "type": "import",
+              "range": [
+                [
+                  0,
+                  4
+                ],
+                [
+                  0,
+                  19
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "lodash@^4.12.0"
+            }
+          },
+          "1": {
+            "4": {
+              "name": "Q",
+              "type": "import",
+              "range": [
+                [
+                  1,
+                  4
+                ],
+                [
+                  1,
+                  14
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "q@^1.4.1"
+            }
+          },
+          "2": {
+            "5": {
+              "name": "fs",
+              "type": "import",
+              "range": [
+                [
+                  2,
+                  5
+                ],
+                [
+                  2,
+                  16
+                ]
+              ],
+              "bindingType": "variable",
+              "module": "fs",
+              "builtin": true
+            }
+          },
+          "4": {
+            "12": {
+              "type": "primitive",
+              "range": [
+                [
+                  4,
+                  12
+                ],
+                [
+                  5,
+                  38
+                ]
+              ]
+            }
+          },
+          "7": {
+            "6": {
+              "type": "primitive",
+              "range": [
+                [
+                  7,
+                  6
+                ],
+                [
+                  7,
+                  7
+                ]
+              ]
+            }
+          },
+          "9": {
+            "35": {
+              "name": "dfs[p]",
+              "type": "function",
+              "range": [
+                [
+                  9,
+                  35
+                ],
+                [
+                  9,
+                  53
+                ]
+              ]
+            }
+          },
+          "11": {
+            "0": {
+              "name": "exists",
+              "bindingType": "exportsProperty",
+              "type": "function",
+              "range": [
+                [
+                  11,
+                  0
+                ],
+                [
+                  11,
+                  5
+                ]
+              ]
+            }
+          },
+          "22": {
+            "0": {
+              "name": "clamp",
+              "bindingType": "exportsProperty",
+              "type": "function",
+              "range": [
+                [
+                  22,
+                  0
+                ],
+                [
+                  22,
+                  5
+                ]
+              ]
+            }
+          }
+        },
+        "exports": {
+          "undefined": 9,
+          "exists": 11,
+          "clamp": 22
+        }
+      }
+    }
+  }
+]
