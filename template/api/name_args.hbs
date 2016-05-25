@@ -1,1 +1,8 @@
-{{> association klass=klass}}</a>**{{name}}(**{{args}}**)**</code> {{> visibility}} {{> code }} [{{> octicon icon='arrow-up'}}](#class-{{klass.name}})
+<tr>
+  <td><code>:: <b>{{name~}} {{~#if isMethod}}({{/if}}</b> {{args}} {{#if isMethod}}<b>)</b>{{/if}}</code></td>
+  <td width="8%" align="center">{{#small}}
+    {{~#toLower}}{{visibility}}{{/toLower}}
+  {{~/small}}</td>
+  <td width="8%" align="center">{{#small}}{{association}}{{/small}}</td>
+  <td width="8%" align="center">{{#small}}{{> className}}{{/small}}</td>
+</tr>

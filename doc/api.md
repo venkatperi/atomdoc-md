@@ -1,43 +1,39 @@
 ### <a name='classes'>API</a>
 
- Class |  Summary
- ------| ------------
- <code>[MarkdownGenerator](#class-MarkdownGenerator)</code> | Generates markdown from atomdoc/tello's metadata
- <code>[Template](#class-Template)</code> | Handlebars template helpers
+Class |  Summary
+------| ------------
+  <code>[MarkdownGenerator](#class-MarkdownGenerator)</code> | Generates markdown from atomdoc/tello's metadata
+  <code>[Template](#class-Template)</code> | Handlebars template helpers
 
-### <a name="class-MarkdownGenerator">MarkdownGenerator</a> <b><sub><sup><code>CLASS  </code></sup></sub></b> [<img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/arrow-up.svg" alt="Back to Class List" height= "18px">](#classes)
-
-Generates markdown from atomdoc/tello's metadata
-
-
- ######<a href="#" target="_blank"><img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/line.png" width="100%" height="1px"></a>
+  ### <a name="class-MarkdownGenerator">MarkdownGenerator</a><b><sub><sup><code>CLASS </code></sup></sub></b><a href="#classes"><img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/arrow-up.svg" alt="Back to Class List" height= "18px"></a>
+  
+  <p>  Generates markdown from atomdoc/tello&#x27;s metadata</p>
+  
+  <table width="100%">
+  </table>
+  
+   <a href="#" target="_blank"><img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/line.png" width="100%" height="1px"></a>
 
  
-
-### <a name="class-Template">Template</a> <b><sub><sup><code>CLASS  </code></sup></sub></b> [<img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/arrow-up.svg" alt="Back to Class List" height= "18px">](#classes)
-
-Handlebars template helpers
-
-######<a href="#" target="_blank"><img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/line.png" width="100%" height="1px"></a>
-
-
-#### Methods
-
-
-<code><a href="#class-Template">Template::</a></a>**get(****)**</code> <img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/public.svg" alt="" height= "18px"> 
- [<img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/code.svg" alt="" height= "18px">](https://github.com/venkatperi/atomdoc-md/blob/v0.1.0/lib/Template.coffee#L37)
- [<img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/arrow-up.svg" alt="" height= "18px">](#class-Template)
-
-* <code>name</code> [{String}](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) The template name 
-
-
-
-<em>Returns</em>
-* Returns a loaded handlebars
-
-
-
-
-
+  ### <a name="class-Template">Template</a><b><sub><sup><code>CLASS </code></sup></sub></b><a href="#classes"><img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/arrow-up.svg" alt="Back to Class List" height= "18px"></a>
+  
+  <p>  Handlebars template helpers</p>
+  
+  <table width="100%">
+    <tr> <td colspan="2"> <h4>Methods</h4> </td> </tr>
+    
+    <tr>
+    <td><code>:: <b>get(</b><b>)</b></code></td>
+    <td><code>Public</code></td> </tr>
+    <tr><td colspan="2">
+    
+    
+    <em>Returns</em>
+    
+    </td></tr>
+    
+  </table>
+  
+  
 
 

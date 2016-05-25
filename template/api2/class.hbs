@@ -1,0 +1,31 @@
+<h3> <a name="class-{{name}}">{{name}}</a> {{> badge content='CLASS' }} <a href="#classes">{{> octicon icon='arrow-up' alt='Back to Class List' ~}}</a></h3>
+
+<p>
+{{{description}}}
+</p>
+
+<table>
+<tr>
+<td width="75%">
+
+{{> properties klass=klass}}
+{{> methods klass=klass}}
+{{> events klass=klass}}
+</td>
+<td>
+
+<b>Properties</b><br>
+{{#each allProperties}}
+<ul>{{name}}</ul>
+{{/each}}
+
+{{#each allMethods}}
+<ul>{{name}}</ul>
+{{/each}}
+
+{{#each events}}
+<ul>{{name}}</ul>
+{{/each}}
+
+</tr>
+</table>

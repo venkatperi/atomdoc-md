@@ -15,7 +15,7 @@
       "name_args",
       "name_desc",
       "properties",
-      "className",
+      "association",
       "visibility"
     ]
   }

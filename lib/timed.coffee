@@ -1,6 +1,6 @@
 Q = require 'q'
 
-module.exports = ( name, f, args... ) ->
+module.exports = ( f, args... ) ->
   start = process.hrtime()
   ret = f.apply null, args...
   Q(ret).then ( res ) ->

@@ -1,17 +1,15 @@
 ### <a name='classes'>API</a>
 
 {{! emit a class list }}
- Class |  Summary
- ------| ------------
+Class |  Summary
+------| ------------
 {{#each classes}}
- <code>[{{name}}](#class-{{name}})</code> | {{#removeCRLF}}{{{summary}}}{{/removeCRLF}}
+  <code>[{{name}}](#class-{{name}})</code> | {{#removeCRLF}}{{{summary}}}{{/removeCRLF}}
 {{/each}}
 
 {{#each classes as |klass|}}
-{{> class klass=klass}}
-
-{{#unless @last}} {{> hr}} {{/unless}}
-
+  {{~> class klass=klass}}
+  {{#unless @last}} {{> hr}} {{/unless}}
 {{/each}}
 
 

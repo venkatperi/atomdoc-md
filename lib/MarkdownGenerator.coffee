@@ -21,15 +21,14 @@ module.exports = class MarkdownGenerator
     if !@path and !@api
       throw new Error 'Need either api or path to api'
 
-    @initialized = hconf
-    .get "atomdoc-md"
+    @initialized = hconf.get "atomdoc-md"
     .then ( cfg ) =>
       @config = cfg
       @template = new Template name : @template, path : @templatePath
       (if @path then @_load(@path) else Q(true))
       .then => @template.initialized
       .then @_createView
-    #@initialized.done() # throw any errors
+  #@initialized.done() # throw any errors
 
   _load : =>
     readFile @path, 'utf8'
@@ -41,7 +40,7 @@ module.exports = class MarkdownGenerator
       do ( s ) =>
         file = path.join @docdir, "s.#{@config.template.ext}"
         exists file
-        .then =>
+        .then ->
           readFile file, 'utf8'
         .then ( contents ) =>
           if contents?
@@ -56,17 +55,13 @@ module.exports = class MarkdownGenerator
         for type in [ 'class', 'instance' ]
           for m in klass[ "#{type}#{cat}" ] ? []
             m.isPublic = m.visibility is 'Public'
+            m.isMethod = cat is 'Methods'
             m.isInstance = type is 'instance'
+            m.association = type
             m.args = args m.arguments
             all.push m
       m?.args = (args m.arguments for m in klass.events ? [])
       klass
-
-  _getMethods : ( klass ) =>
-    methods = public : [], private : []
-    for membership in [ 'class', 'instance' ]
-      for m in klass[ "#{membership}Methods" ]
-        methods[ m.visibility ] = m
 
   _ensureOutputDir : => mkdirp @docdir
 
@@ -79,6 +74,6 @@ module.exports = class MarkdownGenerator
       md
     .then ( output ) =>
       file = path.join @docdir, "#{@name}"
-      writeFile file, output 
+      writeFile file, output
 
         

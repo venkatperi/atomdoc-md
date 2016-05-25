@@ -1,20 +1,17 @@
 {{#if allMethods}}
-{{> hr}}
-
-#### Methods
+<tr>
+  <td colspan="4"><h4>Methods</h4></td>
+</tr>
 
 {{#each allMethods}}
-
 {{> name_args klass=../klass}}
+<tr>
+  <td colspan="4">
+    {{#render}}{{> arguments}}{{/render}}
+    {{#render}}{{{description}}}{{/render}}
+    {{#render}}{{> returns}}{{/render}}
+  </td>
+</tr>
 
-{{> arguments}}
-
-{{{description}}}
-
-{{> returns}}
-
-{{#unless @last}}
-{{> hr}}
-{{/unless}}
 {{/each}}
 {{/if}}

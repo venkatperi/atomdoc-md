@@ -4,6 +4,13 @@ Q = require 'q'
 {readFile} = require './util'
 handlebars = require 'handlebars'
 hconf = require('hconf')(module : module)
+marked = require 'marked'
+#{renderHeadings} = require './helpers'
+
+marked.setOptions
+  sanitize : false
+#renderer = new marked.Renderer()
+#renderer.heading = renderHeadings
 
 ###
 Public: Handlebars template helpers
@@ -31,7 +38,7 @@ module.exports = class Template
   ###
   Public: Returns a loaded handlebars
   
-  * `name` {String} The template name 
+  * `name` {String} The template name
   
   ###
   get : ( name ) => @templates[ name ]
@@ -63,20 +70,38 @@ module.exports = class Template
     .then ( contents ) =>
       @config = JSON.parse contents
       @config.templates.main ?= @_cfg.main
-      @config.templates.ext ?=  @_cfg.ext
+      @config.templates.ext ?= @_cfg.ext
 
-  _registerHelpers : =>
+  _registerHelpers : ->
     handlebars.registerHelper 'toLower', ( options ) ->
       options?.fn(this).toLowerCase()
 
     handlebars.registerHelper 'toUpper', ( options ) ->
       options?.fn(this).toUpperCase()
 
+    handlebars.registerHelper 'small', ( options ) ->
+      x = options?.fn(this)
+      "<sub>#{x}</sub>"
+
     handlebars.registerHelper 'capitalize', ( options ) ->
       _.capitalize options?.fn(this)
 
     handlebars.registerHelper 'removeCRLF', ( options ) ->
       options?.fn(this)?.replace /[\r\n]/g, ' '
+
+    handlebars.registerHelper 'render', ( options ) ->
+      marked options?.fn(this)
+
+    handlebars.registerHelper 'cleanReturns', ( options ) ->
+      options?.fn(this)?.replace /^Returns /, ''
+      
+
+    handlebars.registerHelper 'even', ( idx, fn, elseFn ) ->
+      if idx % 2 == 0 then options?.fn?(this) else options?.elseFn?()
+
+    handlebars.registerHelper 'odd', ( idx, options ) ->
+      if idx % 2 == 1 then options?.fn?(this) else options?.elseFn?()
+
 
   _registerPartials : =>
     for p in @config.templates.partials
@@ -92,6 +117,6 @@ module.exports = class Template
       do ( item ) =>
         file = path.join @path, "#{item}.#{ext}"
         readFile file, 'utf8'
-        .then ( src ) => handlebars.compile src
+        .then ( src ) -> handlebars.compile src
         .then ( tpl ) => @templates[ item ] = tpl )
 

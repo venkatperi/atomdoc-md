@@ -4,7 +4,7 @@ path = require 'path'
 tello = require 'tello'
 MarkdownGenerator = require './lib/MarkdownGenerator'
 prettyTime = require 'pretty-hrtime'
-log = require('./lib/log') 'index'
+log = require('taglog') 'index'
 {writeFile} = require './lib/util'
 timed = require './lib/timed'
 
@@ -56,38 +56,26 @@ log.v 'module:', modulePath
 log.v 'docdir:', docdir
 log.v 'output file:', argv.name
 
-logSave = ( name ) -> ( data ) ->
-  log.d data
-  return data unless argv.meta
-  save path.join(docdir, name), data
+run = ( name, args... ) ->
+  timed args...
+  .then ( [data, t] ) ->
+    log.v "#{name}:", prettyTime t
+    log.d data
+    save path.join(docdir, "#{name}.json"), data if argv.meta and data
+    data
 
 Q()
-.then ->
-  timed 'donna', donna.generateMetadata, [ argv.module ]
-  .then ( [m,t] ) ->
-    log.v 'donna:', prettyTime t
-    m
-.then logSave 'donna.json'
-.then ( metadata )->
-  timed 'tello', -> tello.digest metadata
-  .then ( [m,t] ) ->
-    log.v 'tello:', prettyTime t
-    m
-.then logSave 'tello.json'
+.then -> run 'donna', donna.generateMetadata, [ argv.module ]
+.then ( metadata )-> run 'tello', -> tello.digest metadata
 .then ( apiData ) ->
-  log.d apiData
-
   gen = new MarkdownGenerator(
     modulePath : modulePath
     api : apiData,
     docdir : docdir,
     template : argv.template
     name : argv.name)
-  timed 'generate markdown', gen.generateMarkdown
-  .then ( [m,t] ) ->
-    log.v 'generate markdown:', prettyTime t
-    m
-.then (  ) ->
-  console.log 'Done.'
+  run 'markdown', gen.generateMarkdown
+.then -> console.log 'Done.'
 .fail ( err ) -> console.log err
+.done()
   

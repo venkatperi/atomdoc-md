@@ -1,7 +1,14 @@
-### <a name="class-{{name}}">{{name}}</a> {{> badge content='CLASS' }} [{{> octicon icon='arrow-up' alt='Back to Class List' ~}}](#classes)
+### <a name="class-{{name}}">{{name}}</a>
+{{~> badge content='CLASS' }}
+<a href="#classes">
+  {{~> octicon icon='arrow-up' alt='Back to Class List' ~}}
+</a>
 
-{{{description}}}
+{{#render}}{{{description}}}{{/render}}
 
-{{> properties klass=klass}}
-{{> methods klass=klass}}
+<table width="100%">
+  {{> properties klass=klass}}
+  {{> methods klass=klass}}
+</table>
 {{> events klass=klass}}
+
