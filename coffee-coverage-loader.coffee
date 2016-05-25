@@ -13,6 +13,7 @@ coffeeCoverage.register
     '/test'
     '/node_modules'
     '/.git'
+    '/cli.coffee'
     '/Gruntfile.coffee'
     '/samples'
     '/coffee-coverage-loader.coffee'
