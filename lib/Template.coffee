@@ -1,11 +1,12 @@
 _ = require 'lodash'
 path = require 'path'
 Q = require 'q'
+fs = require 'fs'
 {readFile} = require './util'
 handlebars = require 'handlebars'
 hconf = require('hconf')(module : module)
 marked = require 'marked'
-#{renderHeadings} = require './helpers'
+log = require('taglog') "template"
 
 marked.setOptions
   sanitize : false
@@ -25,7 +26,7 @@ module.exports = class Template
   * `@path` (optional) load a template from {String} path
   
   ###
-  constructor : ( {@name, @path} ) ->
+  constructor : ( {@name, @path, @docdir} ) ->
     @initialized = hconf
     .get 'atomdoc-md.template'
     .then ( cfg ) =>
@@ -72,7 +73,13 @@ module.exports = class Template
       @config.templates.main ?= @_cfg.main
       @config.templates.ext ?= @_cfg.ext
 
-  _registerHelpers : ->
+  _registerHelpers : =>
+    handlebars.registerHelper 'import', ( file, options ) =>
+      try
+        fs.readFileSync path.join(@docdir, file), 'utf8'
+      catch err
+        log.w 'import:', err.message
+
     handlebars.registerHelper 'toLower', ( options ) ->
       options?.fn(this).toLowerCase()
 
@@ -94,14 +101,12 @@ module.exports = class Template
 
     handlebars.registerHelper 'cleanReturns', ( options ) ->
       options?.fn(this)?.replace /^Returns /, ''
-      
 
     handlebars.registerHelper 'even', ( idx, fn, elseFn ) ->
       if idx % 2 == 0 then options?.fn?(this) else options?.elseFn?()
 
     handlebars.registerHelper 'odd', ( idx, options ) ->
       if idx % 2 == 1 then options?.fn?(this) else options?.elseFn?()
-
 
   _registerPartials : =>
     for p in @config.templates.partials

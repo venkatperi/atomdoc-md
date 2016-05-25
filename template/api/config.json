@@ -16,6 +16,7 @@
       "name_desc",
       "properties",
       "className",
+      "summary",
       "visibility"
     ]
   }

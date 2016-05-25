@@ -1,0 +1,7 @@
+{{! emit a class list }}
+Class |  Summary
+------| ------------
+{{#each classes}}
+<code>[{{name}}](#class-{{name}})</code> | {{#removeCRLF}}{{{summary}}}{{/removeCRLF}}
+{{/each}}
+

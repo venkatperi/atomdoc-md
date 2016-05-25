@@ -6,6 +6,7 @@ handlebars = require 'handlebars'
 {args, bt, classHref} = require './helpers'
 mkdirp = Q.denodeify require('mkdirp')
 Template = require './Template'
+log = require('taglog') "generate"
 hconf = require('hconf')(module : module)
 
 ###
@@ -24,7 +25,10 @@ module.exports = class MarkdownGenerator
     @initialized = hconf.get "atomdoc-md"
     .then ( cfg ) =>
       @config = cfg
-      @template = new Template name : @template, path : @templatePath
+      @template = new Template
+        name : @template, 
+        path : @templatePath
+        docdir: @docdir
       (if @path then @_load(@path) else Q(true))
       .then => @template.initialized
       .then @_createView

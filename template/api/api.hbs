@@ -1,15 +1,15 @@
+{{#import 'intro.md'}} {{/import}}
+
 ### <a name='classes'>API</a>
 
-{{! emit a class list }}
-Class |  Summary
-------| ------------
-{{#each classes}}
-  <code>[{{name}}](#class-{{name}})</code> | {{#removeCRLF}}{{{summary}}}{{/removeCRLF}}
-{{/each}}
+{{>summary}}
 
 {{#each classes as |klass|}}
   {{~> class klass=klass}}
-  {{#unless @last}} {{> hr}} {{/unless}}
+  {{#unless @last}}
+<hr/>
+{{/unless}}
 {{/each}}
 
 
+{{#import 'appendix.md'}} {{/import}}
