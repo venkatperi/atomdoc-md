@@ -76,9 +76,11 @@ module.exports = class Template
   _registerHelpers : =>
     handlebars.registerHelper 'import', ( file, options ) =>
       try
-        fs.readFileSync path.join(@docdir, file), 'utf8'
+        name = path.join(@docdir, file)
+        log.v 'import:', name
+        fs.readFileSync name, 'utf8'
       catch err
-        log.w 'import:', err.message
+        log.v 'import:', err.message
 
     handlebars.registerHelper 'toLower', ( options ) ->
       options?.fn(this).toLowerCase()
