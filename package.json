@@ -21,7 +21,7 @@
     "yargs": "^4.7.1"
   },
   "bin": {
-    "atomdoc-md": "./bin/atomdoc-md.coffee"
+    "atomdoc-md": "./bin/atomdoc-md.js"
   },
   "bundleDependencies": [],
   "main": "index.coffee",
