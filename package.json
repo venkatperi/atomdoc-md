@@ -21,10 +21,10 @@
     "yargs": "^4.7.1"
   },
   "bin": {
-    "atomdoc-md": "./bin/atomdoc-md.js"
+    "atomdoc-md": "./bin/atomdoc-md.coffee"
   },
   "bundleDependencies": [],
-  "main": "dist/index.js",
+  "main": "index.coffee",
   "scripts": {
     "prepublish": "grunt",
     "test": "mocha && istanbul report text-summary lcov && rm -rf ./coverage"

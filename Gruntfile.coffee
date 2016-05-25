@@ -23,7 +23,7 @@ config = ( grunt ) ->
   register :
     coverage : [ 'exec:istanbul', 'exec:open_coverage' ]
     test : [ 'exec:mocha', 'coverage' ]
-    default : [ 'coffeelint', 'clean:dist', 'coffee:dist' ]
+    default : [ 'coffeelint' ]
 
 doConfig = ( cfg ) -> ( grunt ) ->
   opts = cfg grunt
