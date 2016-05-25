@@ -7,4 +7,8 @@ pushd . > /dev/null
 cd `dirname ${SCRIPT_PATH}` > /dev/null
 SCRIPT_PATH=`pwd`;
 popd  > /dev/null
-/usr/local/bin/coffee $SCRIPT_PATH/../index.coffee $@
+if [ -f $SCRIPT_PATH/../index.coffee ]; then
+/usr/bin/env coffee $SCRIPT_PATH/../index.coffee $@
+else
+/usr/bin/env node $SCRIPT_PATH/../dist/index.js $@
+fi
