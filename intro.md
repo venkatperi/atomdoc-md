@@ -2,6 +2,8 @@
 Markdown generator for [atomdoc](https://github.com/atom/atomdoc).
 Uses [donna]() and [tello]().
 
+See samples [here](https://github.com/venkatperi/atomdoc-md-samples).
+
 #Installation
 Install with npm
 ```
@@ -14,7 +16,6 @@ npm install -g atomdoc-md
 atomdoc-md generate <path to module>
 ```
 
-See samples [here](https://github.com/venkatperi/atomdoc-md).
 
 #Usage
 

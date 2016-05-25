@@ -14,7 +14,7 @@ marked.setOptions
 #renderer.heading = renderHeadings
 
 ###
-Public: Handlebars template helpers
+Private: Handlebars template helpers
   
 ###
 module.exports = class Template

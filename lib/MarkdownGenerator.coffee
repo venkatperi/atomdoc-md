@@ -11,13 +11,24 @@ hconf = require('hconf')(module : module)
 
 ###
 Public: Generates markdown from atomdoc/tello's metadata
-  
+
 ###
 module.exports = class MarkdownGenerator
 
+  ###
+  Public: Create a new markdown generator
+
+  * `options` {Object}
+    * `options.api` is an {Object} with `tello` api metadata.
+    * `options.path` {String} path to file with `tello` api info
+    * `options.docdir` {String} dir to write the output to. Also looks
+    for files to import (e.g. `intro.md`).
+    * `options.template` {String} name of the template to use
+    * `options.templatePath` {String} alternatively, path to template dir
+  ###
   constructor : ( {
   @api, @path, @docdir, @name,
-  @modulePath, @template, @templatePath
+  @template, @templatePath
   } ) ->
     if !@path and !@api
       throw new Error 'Need either api or path to api'
@@ -28,7 +39,7 @@ module.exports = class MarkdownGenerator
       @template = new Template
         name : @template,
         path : @templatePath
-        docdir: @docdir
+        docdir : @docdir
       (if @path then @_load(@path) else Q(true))
       .then => @template.initialized
       .then @_createView

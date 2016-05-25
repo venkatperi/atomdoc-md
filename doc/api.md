@@ -5,7 +5,6 @@
 Class |  Summary
 ------| ------------
 <code>[MarkdownGenerator](#class-MarkdownGenerator)</code> | Generates markdown from atomdoc/tello's metadata
-<code>[Template](#class-Template)</code> | Handlebars template helpers
 
 
 ### <a name="class-MarkdownGenerator">MarkdownGenerator</a><b><sub><sup><code>CLASS </code></sup></sub></b><a href="#classes"><img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/arrow-up.svg" alt="Back to Class List" height= "18px"></a>
@@ -14,37 +13,32 @@ Class |  Summary
 
 
 <table width="100%">
-</table>
-
-<hr/>
-### <a name="class-Template">Template</a><b><sub><sup><code>CLASS </code></sup></sub></b><a href="#classes"><img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/arrow-up.svg" alt="Back to Class List" height= "18px"></a>
-
-<p>Handlebars template helpers</p>
-
-
-<table width="100%">
   <tr>
     <td colspan="4"><h4>Methods</h4></td>
   </tr>
   
   <tr>
-    <td><code>:: <b>get(</b>  <b>)</b></code></td>
+    <td><code>:: <b>constructor(</b>  <b>)</b></code></td>
     <td width="8%" align="center"><sub>public</sub></td>
     <td width="8%" align="center"><sub>instance</sub></td>
-    <td width="8%" align="center"><sub><a href="#class-Template">Template</a></sub></td>
+    <td width="8%" align="center"><sub><a href="#class-MarkdownGenerator">MarkdownGenerator</a></sub></td>
   </tr>
   <tr>
     <td colspan="4">
       <ul>
-  <li><code>name</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> The template name</li>
+  <li><code>options</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a><ul>
+  <li><code>options.api</code> is an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a> with <code>tello</code> api metadata.</li>
+  <li><code>options.path</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> path to file with <code>tello</code> api info</li>
+  <li><code>options.docdir</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> dir to write the output to. Also looks for files to import (e.g. <code>intro.md</code>).</li>
+  <li><code>options.template</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> name of the template to use</li>
+  <li><code>options.templatePath</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> alternatively, path to template dir</li>
   </ul>
+  </li>
+  </ul>
+  
+      <p>Create a new markdown generator</p>
   
       
-      <p>  <em>Returns</em></p>
-  <ul>
-  <li>Returns a loaded handlebars</li>
-  </ul>
-  
     </td>
   </tr>
   
