@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/venkatperi/atomdoc-md.git"
   },
-  "preferGlobal": false,
+  "preferGlobal": true,
   "description": "generate markdown from atomdoc via donna/tello.",
   "dependencies": {
     "donna": "^1.0.13",
