@@ -20,6 +20,7 @@
     "tello": "^1.0.6",
     "yargs": "^4.7.1"
   },
+  "bin":"./bin/atomdoc-md",
   "bundleDependencies": [],
   "main": "dist/index",
   "scripts": {
