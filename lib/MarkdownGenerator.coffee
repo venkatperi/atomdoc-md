@@ -26,7 +26,7 @@ module.exports = class MarkdownGenerator
     .then ( cfg ) =>
       @config = cfg
       @template = new Template
-        name : @template, 
+        name : @template,
         path : @templatePath
         docdir: @docdir
       (if @path then @_load(@path) else Q(true))
