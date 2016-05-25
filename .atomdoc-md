@@ -1,12 +1,5 @@
 {
   "generator" : {
-    "sections" : [
-      "introduction",
-      "installation",
-      "examples",
-      "api",
-      "appendix"
-    ],
     "href for objects" : true,
     "href for builtin objects" : true,
     "code tag in href" : false

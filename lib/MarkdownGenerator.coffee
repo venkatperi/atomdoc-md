@@ -35,6 +35,7 @@ module.exports = class MarkdownGenerator
 
     @initialized = hconf.get "atomdoc-md"
     .then ( cfg ) =>
+      log.v 'config', cfg
       @config = cfg
       @template = new Template
         name : @template,
@@ -62,6 +63,7 @@ module.exports = class MarkdownGenerator
             @_sections[ s ] = contents)
 
   _createView : =>
+    log.d 'createView'
     @view = {}
     @view.classes = for own name, klass of @api.classes
       klass.isPublic = klass.visibility is 'Public'
@@ -78,7 +80,9 @@ module.exports = class MarkdownGenerator
       m?.args = (args m.arguments for m in klass.events ? [])
       klass
 
-  _ensureOutputDir : => mkdirp @docdir
+  _ensureOutputDir : =>
+    log.d 'ensureOutputDir'
+    mkdirp @docdir
 
   ###
   Public: Writes markdown to the output file. 
@@ -89,12 +93,14 @@ module.exports = class MarkdownGenerator
   generateMarkdown : () =>
     @initialized.then @_ensureOutputDir
     .then =>
+      log.d 'rendering view'
       md = @template.render @view
       if @config.generator[ "href for objects" ]
         md = classHref @api, md, @config.generator
       md
     .then ( output ) =>
       file = path.join @docdir, "#{@name}"
+      log.v 'writing file', file
       writeFile file, output
       output
 

@@ -52,6 +52,7 @@ module.exports = class Template
   Returns {String} the rendered view
   ###
   render : ( view ) =>
+    log.d 'render', view
     @templates[ @config.templates.main ] view
 
   ###
@@ -67,8 +68,10 @@ module.exports = class Template
     .then @_registerHelpers
 
   _loadConfig : =>
+    log.d 'loadConfig'
     readFile path.join(@path, @_cfg.configFile), 'utf8'
     .then ( contents ) =>
+      log.v 'template config', contents
       @config = JSON.parse contents
       @config.templates.main ?= @_cfg.main
       @config.templates.ext ?= @_cfg.ext
@@ -112,6 +115,7 @@ module.exports = class Template
 
   _registerPartials : =>
     for p in @config.templates.partials
+      log.d 'partial', p
       handlebars.registerPartial p, @templates[ p ]
 
   _loadTemplates : =>
@@ -123,6 +127,7 @@ module.exports = class Template
     Q.all (for item in list
       do ( item ) =>
         file = path.join @path, "#{item}.#{ext}"
+        log.v 'loading', file
         readFile file, 'utf8'
         .then ( src ) -> handlebars.compile src
         .then ( tpl ) => @templates[ item ] = tpl )

@@ -18,7 +18,7 @@ Class |  Summary
   </tr>
   
   <tr>
-    <td><code>:: <b>constructor(</b>  <b>)</b></code></td>
+    <td><code>:: <b>constructor(</b> options <b>)</b></code></td>
     <td width="8%" align="center"><sub>public</sub></td>
     <td width="8%" align="center"><sub>instance</sub></td>
     <td width="8%" align="center"><sub><a href="#class-MarkdownGenerator">MarkdownGenerator</a></sub></td>
@@ -39,6 +39,26 @@ Class |  Summary
       <p>Create a new markdown generator</p>
   
       
+    </td>
+  </tr>
+  
+  <tr>
+    <td><code>:: <b>generateMarkdown(</b>  <b>)</b></code></td>
+    <td width="8%" align="center"><sub>public</sub></td>
+    <td width="8%" align="center"><sub>instance</sub></td>
+    <td width="8%" align="center"><sub><a href="#class-MarkdownGenerator">MarkdownGenerator</a></sub></td>
+  </tr>
+  <tr>
+    <td colspan="4">
+      
+      <p>Writes markdown to the output file. </p>
+  
+      <p>  <em>Returns</em></p>
+  <ul>
+  <li>Returns a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> which resolves with the generated
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> when done.</li>
+  </ul>
+  
     </td>
   </tr>
   
