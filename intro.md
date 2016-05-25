@@ -18,9 +18,10 @@ atomdoc-md generate <path to module>
 
 
 #Usage
+## Command Line
 
 ```
-coffee index.coffee generate <module>
+atomdoc-md generate <module>
 
 Options:
   --doc, -o    docs directory  [default: "doc"]
@@ -28,4 +29,13 @@ Options:
   --template   template name  [default: "api"]
   --meta       write donna (donna.json) and tello (tello.json) metadata to doc dir
   --name, -n   generated file name  [default: "api.md"]
+```
+
+## From Node
+
+```coffeescript
+AtomdocMD = require 'atomdoc-md'
+
+generator = new AtomdocMD( options );
+generator.generateMarkdown()
 ```

@@ -79,4 +79,5 @@ Q()
 .then -> console.log 'Done.'
 .fail ( err ) -> console.log err
 .done()
-  
+    
+module.exports = MarkdownGenerator
