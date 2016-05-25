@@ -7,7 +7,6 @@ prettyTime = require 'pretty-hrtime'
 log = require('taglog') 'index'
 {writeFile} = require './lib/util'
 timed = require './lib/timed'
-pkg = require './package.json'
 
 save = ( file, data ) ->
   log.v 'saving file:', file
@@ -47,13 +46,13 @@ argv = require 'yargs'
 
 .demand 1, 'command missing'
 .strict()
+.version()
 .argv
 
 log.level argv.level
 modulePath = path.resolve argv.module
 docdir = path.resolve(path.join argv.module, argv.doc)
 
-log.v 'version:', pkg.version
 log.v 'module:', modulePath
 log.v 'docdir:', docdir
 log.v 'output file:', argv.name

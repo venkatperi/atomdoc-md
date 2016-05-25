@@ -1,14 +1,13 @@
-#!/bin/bash
-SCRIPT_PATH="${BASH_SOURCE[0]}";
-if ([ -h "${SCRIPT_PATH}" ]) then
-  while([ -h "${SCRIPT_PATH}" ]) do SCRIPT_PATH=`readlink "${SCRIPT_PATH}"`; done
-fi
-pushd . > /dev/null
-cd `dirname ${SCRIPT_PATH}` > /dev/null
-SCRIPT_PATH=`pwd`;
-popd  > /dev/null
-if [ -f $SCRIPT_PATH/../index.coffee ]; then
-/usr/bin/env coffee $SCRIPT_PATH/../index.coffee $@
-else
-/usr/bin/env node $SCRIPT_PATH/../dist/index.js $@
-fi
+#!/usr/bin/env node
+
+/* istanbul ignore next */
+try {
+  require( '../dist' )( process.argv )
+} catch ( err ) {
+  if ( err.code === 'MODULE_NOT_FOUND' ) {
+    require( 'coffee-script/register' )
+    require( '../index' )( process.argv )
+  } else {
+    console.log( err )
+  }
+}
