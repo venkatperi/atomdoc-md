@@ -1,13 +1,18 @@
-#atomdoc-md
+{{#with package}}
+# {{name}}
 Markdown generator for [atomdoc](https://github.com/atom/atomdoc).
 Uses [donna]() and [tello]().
+{{#if travis}}
+![](https://img.shields.io/travis/{{travis}}.svg)
+{{/if}}
 
 See samples [here](https://github.com/venkatperi/atomdoc-md-samples).
 
 #Installation
-Install with npm
+Install with [npm](https://www.npmjs.com/package/{{name}})
 ```
-npm install -g atomdoc-md
+npm install {{#if preferGlobal}}-g{{/if}} {{name}}
+
 ```
 
 #Examples
@@ -51,3 +56,4 @@ atomdoc-md generate -o . -n README.md .
 The default template `api` will include files `intro.md` and `appendix.md` into the output.
 The files must be located in the `--doc` docs directory.
 
+{{/with}}

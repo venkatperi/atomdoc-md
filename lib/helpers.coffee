@@ -12,7 +12,7 @@ md =
   bt : ( str ) -> "`#{str}`"
   code : ( str ) -> "<code>#{str}</code>"
   link : ( name, url ) -> "<a href=\"#{url}\">#{name}</a>"
-  #link : ( name, url ) -> "[#{name}](#{url})"
+#link : ( name, url ) -> "[#{name}](#{url})"
   small : ( str ) -> "<sub><sup>#{str}</sup></sub>"
 
 classBacktick = ( str ) ->
@@ -42,7 +42,15 @@ renderHeadings = ( text, level ) ->
   level += 4 if level < 4
   "<h#{level}>#{text}</h#{level}>"
 
+repoInfo = ( repo ) ->
+  return unless repo.type is 'git'
+  m = /^(https?:\/\/github.com\/)?([^\/]+)\/([^\/]+?)(\.git)?$/
+  .exec(repo.url or '')
+  if m
+    m[ 2 ] + '/' + m[ 3 ]
+
 module.exports =
+  repoInfo : repoInfo
   args : args
   md : md
   classBacktick : classBacktick

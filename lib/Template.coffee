@@ -10,8 +10,6 @@ log = require('taglog') "template"
 
 marked.setOptions
   sanitize : false
-#renderer = new marked.Renderer()
-#renderer.heading = renderHeadings
 
 ###
 Private: Handlebars template helpers
@@ -52,6 +50,7 @@ module.exports = class Template
   Returns {String} the rendered view
   ###
   render : ( view ) =>
+    @view = view
     log.d 'render', view
     @templates[ @config.templates.main ] view
 
@@ -81,7 +80,8 @@ module.exports = class Template
       try
         name = path.join(@docdir, file)
         log.v 'import:', name
-        fs.readFileSync name, 'utf8'
+        contents = fs.readFileSync name, 'utf8'
+        handlebars.compile(contents)(@view)
       catch err
         log.v 'import:', err.message
 

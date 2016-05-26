@@ -18,8 +18,8 @@ config = ( grunt ) ->
 
     watch : { coffee : { tasks : [ 'coffee' ], files : src } }
 
-
     exec :
+      readme: {cmd: "atomdoc-md generate . -o . -n README.md" }
       mocha : { cmd : 'mocha --require ./coffee-coverage-loader.coffee' }
       istanbul : { cmd : 'istanbul report lcov' }
       open_coverage : { cmd : 'open ./coverage/lcov-report/index.html' }

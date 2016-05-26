@@ -1,58 +1,38 @@
-# atomdoc-md
-Markdown generator for [atomdoc](https://github.com/atom/atomdoc).
-Uses [donna]() and [tello]().
-![](https://img.shields.io/travis/venkatperi/atomdoc-md.svg)
-
-See samples [here](https://github.com/venkatperi/atomdoc-md-samples).
-
-#Installation
-Install with [npm](https://www.npmjs.com/package/atomdoc-md)
-```
-npm install -g atomdoc-md
-
-```
-
-#Examples
-## Generate docs
-```
-atomdoc-md generate <path to module>
-```
-
-
-#Usage
-## Command Line
-
-```
-atomdoc-md generate <module>
+<p>{{#with package}}</p>
+<h1 id="-name-">{`{name}`}</h1>
+<p>Markdown generator for <a href="https://github.com/atom/atomdoc">atomdoc</a>.
+Uses <a href="">donna</a> and <a href="">tello</a>.</p>
+<p>See samples <a href="https://github.com/venkatperi/atomdoc-md-samples">here</a>.</p>
+<p>#Installation
+Install with <a href="https://www.npmjs.com/package/{`{name}`}">npm</a></p>
+<pre><code>npm install {{#if preferGlobal}}-g{{/if}} {`{name}`}
+</code></pre><p>#Examples</p>
+<h2 id="generate-docs">Generate docs</h2>
+<pre><code>atomdoc-md generate &lt;path to module&gt;
+</code></pre><p>#Usage</p>
+<h2 id="command-line">Command Line</h2>
+<pre><code>atomdoc-md generate &lt;module&gt;
 
 Options:
-  --doc, -o    docs directory  [default: "doc"]
-  --level, -l  log level  [choices: "debug", "verbose", "info", "warn", "error"] [default: "info"]
-  --template   template name  [default: "api"]
+  --doc, -o    docs directory  [default: &quot;doc&quot;]
+  --level, -l  log level  [choices: &quot;debug&quot;, &quot;verbose&quot;, &quot;info&quot;, &quot;warn&quot;, &quot;error&quot;] [default: &quot;info&quot;]
+  --template   template name  [default: &quot;api&quot;]
   --meta       write donna (donna.json) and tello (tello.json) metadata to doc dir
-  --name, -n   generated file name  [default: "api.md"]
-```
-
-## From Node
-
-```coffeescript
-AtomdocMD = require 'atomdoc-md'
+  --name, -n   generated file name  [default: &quot;api.md&quot;]
+</code></pre><h2 id="from-node">From Node</h2>
+<pre><code class="lang-coffeescript">AtomdocMD = require &#39;atomdoc-md&#39;
 
 generator = new AtomdocMD( options );
 generator.generateMarkdown()
-```
-
-## Generate `README.md`
-```
-# From the project's root
+</code></pre>
+<h2 id="generate-readme-md-">Generate <code>README.md</code></h2>
+<pre><code># From the project&#39;s root
 
 atomdoc-md generate -o . -n README.md .
-```
-
-## Importing Files
-The default template `api` will include files `intro.md` and `appendix.md` into the output.
-The files must be located in the `--doc` docs directory.
-
+</code></pre><h2 id="importing-files">Importing Files</h2>
+<p>The default template <code>api</code> will include files <code>intro.md</code> and <code>appendix.md</code> into the output.
+The files must be located in the <code>--doc</code> docs directory.</p>
+<p>{{/with}}</p>
 
 
 # <a name='classes'>API</a>

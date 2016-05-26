@@ -18,7 +18,7 @@ Class |  Summary
   </tr>
   
   <tr>
-    <td><code>:: <b>constructor(</b> options <b>)</b></code></td>
+    <td><code>:: <b>constructor(</b> opt <b>)</b></code></td>
     <td width="8%" align="center"><sub>public</sub></td>
     <td width="8%" align="center"><sub>instance</sub></td>
     <td width="8%" align="center"><sub><a href="#class-MarkdownGenerator">MarkdownGenerator</a></sub></td>
@@ -26,12 +26,13 @@ Class |  Summary
   <tr>
     <td colspan="4">
       <ul>
-  <li><code>options</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a><ul>
-  <li><code>options.api</code> is an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a> with <code>tello</code> api metadata.</li>
-  <li><code>options.path</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> path to file with <code>tello</code> api info</li>
-  <li><code>options.docdir</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> dir to write the output to. Also looks for files to import (e.g. <code>intro.md</code>).</li>
-  <li><code>options.template</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> name of the template to use</li>
-  <li><code>options.templatePath</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> alternatively, path to template dir</li>
+  <li><code>opt</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a> Options<ul>
+  <li><code>opt.api</code> is an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a> with <code>tello</code> api metadata.</li>
+  <li><code>opt.path</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> path to file with <code>tello</code> api info</li>
+  <li><code>opt.docdir</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> dir to write the output to. Also looks for files to import (e.g. <code>intro.md</code>).</li>
+  <li><code>opt.template</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> name of the template to use</li>
+  <li><code>opt.templatePath</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> alternatively, path to template dir</li>
+  <li><code>opt.modulePath</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> path to the module (for package.json) </li>
   </ul>
   </li>
   </ul>
@@ -51,7 +52,7 @@ Class |  Summary
   <tr>
     <td colspan="4">
       
-      <p>Writes markdown to the output file. </p>
+      <p>Writes markdown to the output file.</p>
   
       <p>  <em>Returns</em></p>
   <ul>
