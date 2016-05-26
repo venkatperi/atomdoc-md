@@ -2,7 +2,7 @@
 Markdown generator for [atomdoc](https://github.com/atom/atomdoc).
 Uses [donna]() and [tello]().
 
-![](https://img.shields.io/travis/venkatperi/atomdoc-md.svg) [![npm](https://img.shields.io/npm/atomdoc-md/npm.svg?maxAge=2592000)]()
+![](https://img.shields.io/travis/venkatperi/atomdoc-md.svg) [![npm](https://img.shields.io/npm/v/atomdoc-md.svg?maxAge=2592000)]()
 
 See samples [here](https://github.com/venkatperi/atomdoc-md-samples).
 
