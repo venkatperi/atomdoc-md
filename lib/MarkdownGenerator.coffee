@@ -44,6 +44,7 @@ module.exports = class MarkdownGenerator
       @_getApi
       @_getPackage
       @_checkForTravis
+      @_checkForLicense
     ]
 
     @initialized = @initTasks.all.then @_createView
@@ -90,10 +91,17 @@ module.exports = class MarkdownGenerator
       log.v 'has travis:', val
       @hasTravis = val
 
+  _checkForLicense : =>
+    exists path.join(@modulePath, 'LICENSE')
+    .then ( val ) =>
+      log.v 'has license:', val
+      @license = 'LICENSE'
+
   _createView : =>
     log.d 'createView'
     if @hasTravis
       @package.travis = repoInfo @package.repository
+    @package.license = @license
     @view = { package : @package }
 
     @view.classes = for own name, klass of @api.classes

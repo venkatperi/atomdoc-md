@@ -2,9 +2,12 @@
 # {{name}}
 Markdown generator for [atomdoc](https://github.com/atom/atomdoc).
 Uses [donna]() and [tello]().
+
 {{#if travis}}
 ![](https://img.shields.io/travis/{{travis}}.svg)
 {{/if}}
+
+[![npm](https://img.shields.io/npm/v/npm.svg?maxAge=2592000)]()
 
 See samples [here](https://github.com/venkatperi/atomdoc-md-samples).
 
