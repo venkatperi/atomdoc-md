@@ -42,7 +42,7 @@ Class |  Summary
 <code>[MarkdownGenerator](#class-MarkdownGenerator)</code> | Generates markdown from atomdoc/tello's metadata
 
 
-### <a name="class-MarkdownGenerator">MarkdownGenerator</a><b><sub><sup><code>CLASS </code></sup></sub></b><a href="#classes"><img src="https://rawgit.com/venkatperi/atomdoc-md/master/assets/octicons/arrow-up.svg" alt="Back to Class List" height= "18px"></a>
+### <a name="class-MarkdownGenerator">MarkdownGenerator</a><b><sub><sup><code>CLASS </code></sup></sub></b><a href="#classes"><img src="https://cdn.jsdelivr.net/gh/venkatperi/atomdoc-md/assets/octicons/arrow-up.svg" alt="Back to Class List" height= "18px"></a>
 
 <p>Generates markdown from atomdoc/tello&#39;s metadata</p>
 
